@@ -6,4 +6,4 @@ const Shakeeb = () => {
     </div>
 )}
 
-export default Shakeeb
+export default Shakeeb;

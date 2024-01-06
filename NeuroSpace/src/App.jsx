@@ -12,7 +12,7 @@ import BookAppointment from './components/BookAppointment';
 import ContactUs from './components/ContactUs';
 import Blog from './components/Blog';
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 
 function App() {

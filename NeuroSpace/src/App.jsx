@@ -17,11 +17,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <div>
         <Header/>
         <Navbar/>
         <Routes>
-          <Route path="/home" Component={Home}>
+          <Route exact path="/" Component={Home}>
             {/* <Home/> */}
           </Route>
 
@@ -45,10 +45,9 @@ function App() {
             {/* <Blog/> */}
           </Route>
         </Routes>
-        
         <Footer/>
-    </Router>
-
+    </div>
+        
   )
 }
 

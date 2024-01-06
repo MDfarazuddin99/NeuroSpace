@@ -24,6 +24,7 @@ function Navbar() {
           h={100}
           rounded={0}
           mr={0}
+          _hover={{bg:'blue.50', color:"teal.900"}}
         />
         <MenuList >
           <MenuItem>

@@ -7,7 +7,7 @@ function Header(){
           <Text fontSize={{base: 'md', md:'2xl'}} fontWeight={'bold'} ml={{base: 0, md: "5%"}}>
             TIMINGS: MON-SAT: 8AM – 12PM  |   5PM – 9PM
           </Text>
-          <Spacer />
+          <Spacer display={{base: 'none', md: 'block'}}/>
           <Button bg={'orange'} rightIcon={<ArrowForwardIcon />} flex={"None"} mr={{md: "10%"}} >
           <Link to="/book-appointment">BOOK APPOINTMENT</Link>
           </Button>

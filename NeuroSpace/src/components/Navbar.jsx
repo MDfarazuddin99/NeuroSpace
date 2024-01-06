@@ -1,50 +1,31 @@
-import {Box, Flex, Spacer, Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
-import { ChevronDownIcon} from '@chakra-ui/icons';
+import { Box, Flex, Button, Image } from "@chakra-ui/react";
+import HeaderLogo from "../assets/HeaderLogo.png";
+// import { useHistory } from "react-router-dom";
 
 
-function Navbar(){
-    return (
-        <Box bg="teal.300" p={1}>
-        <Flex align="center" justify="space-between">
-          {/* Home to Blog Links */}
-          <Button flex={1} colorScheme="teal.300" mr={6} _hover={{ bg: 'teal.100', color: 'teal.500' }} fontSize="lg">
-            Home
-          </Button>
-          <Button flex={1} colorScheme="teal.300" mr={6} _hover={{ bg: 'teal.100', color: 'teal.500' }} fontSize="lg">
-            About Us
-          </Button>
-          <Button flex={1} colorScheme="teal.300" mr={6} _hover={{ bg: 'teal.100', color: 'teal.500' }} fontSize="lg">
-            Departments
-          </Button>
-          <Button flex={1} colorScheme="teal.300" mr={6} _hover={{ bg: 'teal.100', color: 'teal.500' }} fontSize="lg">
-            Patient Care
-          </Button>
-  
-          {/* More (Dropdown) */}
-          <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} colorScheme="teal.300" mr={6} _hover={{ bg: 'teal.100', color: 'teal.500' }} fontSize="lg">
-              More
-            </MenuButton>
-            <MenuList>
-              <MenuItem>Option 1</MenuItem>
-              <MenuItem>Option 2</MenuItem>
-              {/* Add more dropdown options as needed */}
-            </MenuList>
-          </Menu>
-  
-          {/* Blog and Reach Us Links */}
-          <Button flex={1} colorScheme="teal.300" mr={6} _hover={{ bg: 'teal.100', color: 'teal.500' }} fontSize="lg">
-            Blog
-          </Button>
-          <Button flex={1} colorScheme="teal.300" mr={6} _hover={{ bg: 'teal.100', color: 'teal.500' }} fontSize="lg">
-            Reach Us
-          </Button>
-  
-          <Spacer />
-        </Flex>
-      </Box>
-    )
+function Navbar() {
+
+  // const history = useHistory();
+
+  // const handleButtonClick = () => {
+  //   // Redirect to the desired URL
+  //   history.push("/new-url");
+  // };
+
+
+  return (
+    <Box bg="blue.50">
+      <Flex align="center" justify="space-between"  marginLeft={10} marginRight={10} >
+          <Image src={HeaderLogo} h={100} bg="blue.50" />
+          <Button bg={"blue.50"} _hover={{bg: 'blue.600', color:'orange'}} h={100} rounded={0} >HOME</Button>
+          <Button bg={"blue.50"} _hover={{bg: 'blue.600', color:'orange'}} h={100} rounded={0}>SERVICES</Button>
+          <Button bg={"blue.50"} _hover={{bg: 'blue.600', color:'orange'}} h={100} rounded={0}>DR. SHAKEEB AHRAR</Button>
+          <Button bg={"blue.50"} _hover={{bg: 'blue.600', color:'orange'}} h={100} rounded={0}>BOOK APPOINTMENT</Button>
+          <Button bg={"blue.50"} _hover={{bg: 'blue.600', color:'orange'}} h={100} rounded={0}>CONTACT US</Button>
+          <Button bg={"blue.50"} _hover={{bg: 'blue.600', color:'orange'}} h={100} rounded={0}>BLOG</Button>
+      </Flex>
+    </Box>
+  );
 }
 
 export default Navbar;
-

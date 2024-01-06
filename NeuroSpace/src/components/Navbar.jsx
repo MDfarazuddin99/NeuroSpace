@@ -1,21 +1,121 @@
-import { Box, Flex, Button, Image } from "@chakra-ui/react";
+import { Flex, Button, Image, IconButton, Spacer, Menu, MenuButton, MenuList, MenuItem} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import HeaderLogo from "../assets/HeaderLogo.png";
-import {Link} from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
-
-
-
   return (
-      <Flex bg="blue.50" align="center" justify="space-between"   direction={{base:'column' , md: 'row'}}>
-          <Image src={HeaderLogo} h={{base:75, md: 100}} bg="blue.50" />
-          <Button bg={"blue.50"} _hover={{bg: 'teal.500', color:'orange'}} h={100} rounded={0} ><Link to="/">Home</Link></Button>
-          <Button bg={"blue.50"} _hover={{bg: 'teal.500', color:'orange'}} h={100} rounded={0} ><Link to="/services">SERVICES</Link></Button>
-          <Button bg={"blue.50"} _hover={{bg: 'teal.500', color:'orange'}} h={100} rounded={0} ><Link to="/shakeeb">DR. SHAKEEB AHRAR</Link></Button>
-          <Button bg={"blue.50"} _hover={{bg: 'teal.500', color:'orange'}} h={100} rounded={0} ><Link to="/book-appointment">BOOK APPOINTMENT</Link></Button>
-          <Button bg={"blue.50"} _hover={{bg: 'teal.500', color:'orange'}} h={100} rounded={0} ><Link to="/contact-us">CONTACT US</Link></Button>
-          <Button bg={"blue.50"} _hover={{bg: 'teal.500', color:'orange'}} h={100} rounded={0} ><Link to="/blog">BLOG</Link></Button>
-      </Flex> 
+    <Flex
+      bg="blue.50"
+      align="center"
+      justify="space-between"
+      direction="row"
+    >
+      <Image src={HeaderLogo} h={{ base: 75, md: 100 }} bg="blue.50" />
+      <Spacer/>
+      <Menu bg={'teal.300'}>
+        <MenuButton
+          as={IconButton}
+          aria-label="Options"
+          icon={<HamburgerIcon />}
+          // variant="outline"
+          display={{ base: "block", md: "none" }}
+          bg={'teal.300'}
+          h={100}
+          rounded={0}
+          mr={0}
+        />
+        <MenuList >
+          <MenuItem>
+            <NavLink to="/">Home</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink to="/services">SERVICES</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink to="/book-appointment">BOOK APPOINTMENT</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink to="/contact-us">CONTACT US</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink to="/blog">BLOG</NavLink>
+          </MenuItem>
+        </MenuList>
+      </Menu>
+
+      <Flex w="full" display={{ base: 'none', md: 'flex'}}>
+        <Button
+          bg="blue.50"
+          _hover={{ bg: "teal.500", color: "orange" }}
+          h={100}
+          rounded={0}
+          w="full"
+          py={{ base: 1, md: 0 }}
+        >
+          <NavLink to="/">Home</NavLink>
+        </Button>
+
+        <Button
+          bg="blue.50"
+          _hover={{ bg: "teal.500", color: "orange" }}
+          h={100}
+          rounded={0}
+          w="full"
+          py={{ base: 1, md: 0 }}
+        >
+          <NavLink to="/services">SERVICES</NavLink>
+        </Button>
+
+        <Button
+          bg="blue.50"
+          _hover={{ bg: "teal.500", color: "orange" }}
+          h={100}
+          rounded={0}
+          w="full"
+          py={{ base: 1, md: 0 }}
+        >
+          <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
+        </Button>
+
+        <Button
+          bg="blue.50"
+          _hover={{ bg: "teal.500", color: "orange" }}
+          h={100}
+          rounded={0}
+          w="full"
+          py={{ base: 1, md: 0 }}
+        >
+          <NavLink to="/book-appointment">BOOK APPOINTMENT</NavLink>
+        </Button>
+
+        <Button
+          bg="blue.50"
+          _hover={{ bg: "teal.500", color: "orange" }}
+          h={100}
+          rounded={0}
+          w="full"
+          py={{ base: 1, md: 0 }}
+        >
+          <NavLink to="/contact-us">CONTACT US</NavLink>
+        </Button>
+
+        <Button
+          bg="blue.50"
+          _hover={{ bg: "teal.500", color: "orange" }}
+          h={100}
+          rounded={0}
+          w="full"
+          py={{ base: 1, md: 0 }}
+          mr={0}
+        >
+          <NavLink to="/blog">BLOG</NavLink>
+        </Button>
+      </Flex>
+    </Flex>
   );
 }
 

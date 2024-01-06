@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer'
 import Home from './components/Home';
 import Services from './components/Services';
-import Shakeeb from './components/shakeeb';
+import Shakeeb from './components/Shakeeb';
 import BookAppointment from './components/BookAppointment';
 import ContactUs from './components/ContactUs';
 import Blog from './components/Blog';

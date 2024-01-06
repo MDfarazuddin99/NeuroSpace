@@ -20,7 +20,7 @@ function Navbar() {
           icon={<HamburgerIcon />}
           // variant="outline"
           display={{ base: "block", md: "none" }}
-          bg={'teal.300'}
+          bg={'teal.500'}
           h={100}
           rounded={0}
           mr={0}

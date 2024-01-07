@@ -11,14 +11,14 @@ function Navbar() {
       justify="space-between"
       direction="row"
     >
-      <Image src={HeaderLogo} h={{ base: 75, md: 100 }} bg="blue.50" />
+      <Image src={HeaderLogo} ml={{base: '25%', md:0}} h={{ base: 50, md: 100 }} bg="blue.50" />
       <Spacer/>
       <Menu bg={'teal.300'}>
         <MenuButton
+          fontSize={30}
           as={IconButton}
           aria-label="Options"
           icon={<HamburgerIcon />}
-          // variant="outline"
           display={{ base: "block", md: "none" }}
           bg={'teal.500'}
           h={100}

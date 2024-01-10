@@ -13,7 +13,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import HeaderLogo from "../assets/HeaderLogo.png";
 import { NavLink } from "react-router-dom";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -42,9 +42,9 @@ function Navbar() {
     direction="row"
     px={{ base: "none", md: "5%" }}
     w="100%"
-    position={hasShadow ? 'fixed' : 'relative'}
+    position={hasShadow ? 'sticky' : 'relative'}
     top="0"
-    boxShadow={hasShadow ? '0px 2px 4px rgba(0, 0, 0, 0.1)' : 'none'}
+    boxShadow={hasShadow ? '0px 2px 4px rgba(0, 0, 0, 0.5)' : 'none'}
     zIndex="999"
     >
       <Image
@@ -90,7 +90,7 @@ function Navbar() {
       </Menu>
 
       <Flex w="full" display={{ base: "none", md: "flex" }}>
-        <Button variant={"navbarbutton"}>
+        <Button variant={"navbarbutton"} _hover>
           <NavLink to="/">Home</NavLink>
         </Button>
 

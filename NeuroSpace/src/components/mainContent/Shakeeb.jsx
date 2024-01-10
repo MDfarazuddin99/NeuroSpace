@@ -1,5 +1,4 @@
 import {
-  Box,
   Image,
   Text,
   Card,
@@ -12,13 +11,31 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 
+import {useState, useEffect} from "react";
 
 import shakeebImage from "../../assets/shakeeb.jpeg";
 
 const Shakeeb = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Set a delay to trigger the animation after the component is mounted
+    const timeoutId = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   return (
     <Container variant={"main"}>
-      <Flex >
+      <Flex
+      opacity={isVisible ? 1 : 0}
+      transform={isVisible ? 'translateY(0)' : 'translateY(-50px)'}
+      transition="opacity 0.3s, transform 0.3s"      
+      >
         <Card
           w={{ md: "auto", base: "100%" }}
           direction={{ base: "column", sm: "row" }}
@@ -41,13 +58,16 @@ const Shakeeb = () => {
             </Text>
           </Flex>
           <Image
+            bg="teal.300"
             borderRadius={{
-              md: "30% 70% 70% 30% / 30% 30% 70% 70% ",
-              base: "150",
+              md: "30% 70% 70% 30% / 30% 30% 70% 70%",
+              base: "0",
             }}
             h={400}
             src={shakeebImage}
             p={"1%"}
+            _hover={{ transform: "scale(1.1)" }} // Add scaling transformation on hover
+            transition="transform 0.5s ease-in-out" // Add a smooth transition effect
           />
           <Stack>
             <CardBody>
@@ -71,7 +91,7 @@ const Shakeeb = () => {
               <Text fontSize={"xl"}>
                 MBBS, MD DM Neurology (NIMS) (Gold Medalist)
               </Text>
-              <Text fontSize={'18px'} color={'black'}>
+              <Text fontSize={"18px"} color={"black"}>
                 Dr. Shakeeb Ahrar is a practicing consultant neurophysician in
                 hyderabad with a good clinical experience of 10 years in the
                 field of medicine. After being trained in the field of Internal
@@ -83,11 +103,22 @@ const Shakeeb = () => {
                 professionalism in his work , is compassionate and strives to
                 provide the best possible care towards his patients.
               </Text>
-              <UnorderedList fontSize={'16px'} fontWeight={'bold'} fontFamily={'sans-serif'} mt={'1%'}>
-                <ListItem>{'8 years plus Clinical Experience'.toUpperCase()}</ListItem>
-                <ListItem>{'Doctorate of Medicine (DM) Neurology'.toLocaleUpperCase()}</ListItem>
-                <ListItem>{'MD Internal Medicine'.toUpperCase()}</ListItem>
-                <ListItem>{'Member in the International Parkinson and Movement Disorder Society (IPMDS)'.toUpperCase()}</ListItem>
+              <UnorderedList
+                fontSize={"16px"}
+                fontWeight={"bold"}
+                fontFamily={"sans-serif"}
+                mt={"1%"}
+              >
+                <ListItem>
+                  {"8 years plus Clinical Experience".toUpperCase()}
+                </ListItem>
+                <ListItem>
+                  {"Doctorate of Medicine (DM) Neurology".toLocaleUpperCase()}
+                </ListItem>
+                <ListItem>{"MD Internal Medicine".toUpperCase()}</ListItem>
+                <ListItem>
+                  {"Member in the International Parkinson and Movement Disorder Society (IPMDS)".toUpperCase()}
+                </ListItem>
               </UnorderedList>
             </CardBody>
           </Stack>

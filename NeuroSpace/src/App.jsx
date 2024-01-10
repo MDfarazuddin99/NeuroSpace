@@ -18,7 +18,7 @@ import bgimage from './assets/bg_image.jpg'
 
 function App() {
   return (
-    <div style = {{backgroundImage : {bgimage}}}>
+    <div >
         <Header/>
         <Navbar/>
         <Routes>

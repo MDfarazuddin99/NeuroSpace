@@ -16,24 +16,22 @@ import FooterLogo from "../assets/FooterLogo.png";
 
 function Footer() {
   return (
-    <Flex
+    <Box
       as="footer"
       align="center"
       justify={'center'}
       bg="teal.500"
       color="white"
       p={4}
-      position="fixed"
       bottom="0"
       width="100%"
       direction={{base:'column', md: 'row'}}
-    >
+      >
 
         <Image src={FooterLogo} h={{base: 50, md: 75}} />
 
       <Spacer/>    
-      <Flex direction={{base:'row' , md: 'column'}}>
-        <Link href="#" isExternal mx={{base: 0, md: 2}} my={1}>
+        <Link href="#" isExternal mx={{base: 0, md: 2}} mb={1}>
           <IconButton
             icon={<FaTwitter />}
             aria-label="Twitter"
@@ -47,15 +45,14 @@ function Footer() {
             colorScheme="whiteAlpha"
           />
         </Link>
-        <Link href="#" isExternal mx={{base: 0, md: 2}} my={1}>
+        <Link href="#" isExternal mx={{base: 0, md: 2}} mt={1}>
           <IconButton
             icon={<FaInstagram />}
             aria-label="Instagram"
             colorScheme="whiteAlpha"
           />
         </Link>
-      </Flex>
-    </Flex>
+    </Box>
   );
 }
 

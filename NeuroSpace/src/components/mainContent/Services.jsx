@@ -1,24 +1,29 @@
 import {
-  Card,
-  Container,
-  Flex,
-  Grid,
-  VStack,
   Image,
-  Heading,
+  Text,
+  Card,
   CardBody,
-  GridItem,
+  Flex,
+  Heading,
+  Stack,
+  Container,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
+import {useState, useEffect} from "react";
+import shakeebImage from "../../assets/shakeeb.jpeg";
 
-import sampleimage from "../../assets/sample1.png";
 
 const Services = () => {
+
+
   return (
-    <Container variant={"main"}>
-      <Flex m="auto" bg="red" w="80%" h="700">
-        
-      </Flex>
+    <Container variant={'main'} py={"2vh"} >
+        <Flex minH="1000px" bg="blue.50" w="75%" mx="12.5%">
+
+        </Flex>
     </Container>
+  
   );
 };
 

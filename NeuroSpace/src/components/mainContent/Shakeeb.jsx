@@ -1,128 +1,244 @@
 import {
   Image,
   Text,
-  Card,
-  CardBody,
   Flex,
   Heading,
-  Stack,
   Container,
-  UnorderedList,
-  ListItem,
+  Box,
+  Table,
+  Tbody,
+  Tr,
+  Td,
+Spacer,
 } from "@chakra-ui/react";
-
-import {useState, useEffect} from "react";
-
+import { useRef } from "react";
 import shakeebImage from "../../assets/shakeeb.jpeg";
+import doctorImage1 from "../../assets/doctor1.jpeg";
+import doctorImage2 from "../../assets/doctor2.jpeg";
+
 
 const Shakeeb = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const shakeebInfo = {
+    experience: "7+ years",
+    qualifications: "MBBS, DNB GENERAL MEDICINE, DNB NEUROLOGY",
+    areasOfExpertise: [
+      "Headache",
+      "Back pain",
+      "Neck pain",
+      "Stroke",
+      "Seizures",
+    ],
+    languages: ["English", "Hindi", "Telugu"],
+  };
 
-  useEffect(() => {
-    // Set a delay to trigger the animation after the component is mounted
-    const timeoutId = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
+  const physioInfo = {
+    name: "Dr. Emma Smith",
+    experience: "8+ years",
+    qualifications: "BPT, MPT in Orthopedics",
+    areasOfExpertise: [
+      "Sports Injuries",
+    ],
+    languages: ["English"],
+  };
+  
+  const orthoInfo = {
+    name: "Dr. James Anderson",
+    experience: "10+ years",
+    qualifications: "MBBS, MS Orthopedics",
+    areasOfExpertise: [
+      "Arthroscopy",
+      "Spine Surgery",
+    ],
+    languages: ["English"],
+  };
 
   return (
-    <Container variant={"main"}>
+    <Container variant={"main"} py={"2vh"}>
       <Flex
-      opacity={isVisible ? 1 : 0}
-      transform={isVisible ? 'translateY(0)' : 'translateY(-50px)'}
-      transition="opacity 0.3s, transform 0.3s"      
+        w={"75%"}
+        mx="12.5%"
+        flexDirection="column"
+        align="center"
+        bg="blue.50"
       >
-        <Card
-          w={{ md: "auto", base: "100%" }}
-          direction={{ base: "column", sm: "row" }}
-          my={"5%"}
-          mx={"10%"}
-          bg="blue.50"
-          boxShadow="xl"
-        >
-          <Flex
-            alignItems={"center"}
-            justifyContent={"center"}
-            display={{ base: "flex", md: "none" }}
-          >
-            <Text
-              fontSize={"lg"}
-              textTransform={"uppercase"}
-              fontWeight={"bold"}
-            >
-              Meet Our Doctor
+        <Flex>
+          <Box bg="blue.50" m={"2%"}>
+            <Image src={shakeebImage} w={400} />
+            <Table>
+              <Tbody>
+                <Tr bg="blue.100">
+                  <Td fontWeight={"bold"} bg="blue.100">
+                    Experience
+                  </Td>
+                  <Td>{shakeebInfo.experience}</Td>
+                </Tr>
+                <Tr>
+                  <Td fontWeight={"bold"}>Qualifications</Td>
+                  <Td>{shakeebInfo.qualifications}</Td>
+                </Tr>
+                <Tr bg="blue.100">
+                  <Td fontWeight={"bold"}>Areas of Expertise</Td>
+                  <Td>{shakeebInfo.areasOfExpertise.join(", ")}</Td>
+                </Tr>
+                <Tr>
+                  <Td fontWeight={"bold"}>Languages</Td>
+                  <Td>{shakeebInfo.languages.join(", ")}</Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </Box>
+          <Box my={"2%"} bg="blue.100" w="100%" mr={"1%"} px={1}>
+            <Heading>Dr. Shakeeb Ahrar</Heading>
+            <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
+            <Heading size={"md"}> Education & Qualifications </Heading>
+            <Text mb={2}>
+              MBBS: 2005 - 2010, SHADAN INSTITUTE OF MEDICAL SCIENCES,
+              Hyderabad, Telangana Internship: 2010-2011, SHADAN INSTITUTE OF
+              MEDICAL SCIENCES, Hyderabad, Telangana DNB General Medicine:
+              October 2012 – December 2015, K.J.SOMAIYA MEDICAL COLLEGE &
+              RESEARCH CENTRE, Mumbai DNB Neurology: April 2017 - September
+              2020, CARE HOSPITALS, Nampally, Hyderabad
             </Text>
-          </Flex>
-          <Image
-            bg="teal.300"
-            borderRadius={{
-              md: "30% 70% 70% 30% / 30% 30% 70% 70%",
-              base: "0",
-            }}
-            h={400}
-            src={shakeebImage}
-            p={"1%"}
-            _hover={{ transform: "scale(1.1)" }} // Add scaling transformation on hover
-            transition="transform 0.5s ease-in-out" // Add a smooth transition effect
-          />
-          <Stack>
-            <CardBody>
-              <Flex
-                alignItems={"center"}
-                justifyContent={"center"}
-                display={{ base: "none", md: "flex" }}
-              >
-                <Text
-                  fontSize={"lg"}
-                  textTransform={"uppercase"}
-                  fontWeight={"bold"}
-                >
-                  Meet Our Doctor
-                </Text>
-              </Flex>
+            <Heading size={"md"}>Professional Experience</Heading>
+            <Text mb={2} textAlign="justify">
+              Consultant Neurologist: Renova Hospitals, Langar Houz, October
+              2020 - December 2021 Consultant General Physician: Challa
+              Hospitals, Hyderabad, April 2016 - March 2017 Presently Working:
+              Full Time Consultant Neurologist, American Brain and Spine
+              Hospitals, Attapur
+            </Text>
+            <Heading size={"md"}>Special Interests & Achievements</Heading>
+            <Text mb={2} textAlign="justify">
+              During Dr. Priyanka Sangani's training period in neurology, she
+              developed a special interest in movement disorders, including
+              Parkinson's disease, dystonias, and NBIA. These challenging
+              disorders have become a focal point of her practice. She has
+              presented case reports at state and national level conferences and
+              completed a thesis on the clinical spectrum of dementia at a
+              tertiary care center. After finishing her superspecialization in
+              neurology, Dr. Priyanka Sangani worked as a Consultant
+              Neurophysician at Renova Hospitals and began teaching clinical
+              classes in neurology for postgraduate (General Medicine) students
+              at Princess Durrushevar Hospital. Since April 2021, Dr. Priyanka
+              Sangani has been working part-time at American Brain and Spine
+              Hospitals, where she has learned the uses of rTMS in stroke and
+              its benefits in various neurological and psychiatric illnesses.
+              Her passion for neurology has only grown, with a special interest
+              in rTMS and other non-invasive treatment modalities for diseases
+              with limited medical management options.
+            </Text>
+            <Heading size={"md"}> Current Position</Heading>
+            <Text textAlign="justify">
+              Dr. Priyanka Sangani is presently working as a full-time
+              Consultant Neurologist at American Brain and Spine Hospitals,
+              where she continues to explore innovative treatments and provide
+              top-tier care for her patients. Schedule your consultation today,
+              call us at 7981370703 or book online.
+            </Text>
+          </Box>
+        </Flex>
 
-              <Heading fontSize={"4xl"} fontWeight={"bold"}>
-                Dr. Shakeeb Ahrar
-              </Heading>
-              <Text fontSize={"xl"}>
-                MBBS, MD DM Neurology (NIMS) (Gold Medalist)
-              </Text>
-              <Text fontSize={"18px"} color={"black"}>
-                Dr. Shakeeb Ahrar is a practicing consultant neurophysician in
-                hyderabad with a good clinical experience of 10 years in the
-                field of medicine. After being trained in the field of Internal
-                Medicine for 3 years, he was among the top few students in the
-                post graduate examinations and had worked as a senior resident
-                in Gandhi medical college . He has received his Doctorate of
-                medicine (DM) in Neurology from the prestigious Nizam's
-                Institute of Medical Sciences (NIMS), Hyderabad. He exhibits,
-                professionalism in his work , is compassionate and strives to
-                provide the best possible care towards his patients.
-              </Text>
-              <UnorderedList
-                fontSize={"16px"}
-                fontWeight={"bold"}
-                fontFamily={"sans-serif"}
-                mt={"1%"}
-              >
-                <ListItem>
-                  {"8 years plus Clinical Experience".toUpperCase()}
-                </ListItem>
-                <ListItem>
-                  {"Doctorate of Medicine (DM) Neurology".toLocaleUpperCase()}
-                </ListItem>
-                <ListItem>{"MD Internal Medicine".toUpperCase()}</ListItem>
-                <ListItem>
-                  {"Member in the International Parkinson and Movement Disorder Society (IPMDS)".toUpperCase()}
-                </ListItem>
-              </UnorderedList>
-            </CardBody>
-          </Stack>
-        </Card>
+
+
+        <Heading>
+          Additional Doctors
+        </Heading>
+        <Flex flexDirection={'row'} w="100%" m={'1%'}>
+          <Flex w="50%">
+            <Box bg="blue.50" m={"2%"}>
+              <Image src={doctorImage1} w={300} maxH={300}/>
+              <Table w={300}>
+                <Tbody>
+                  <Tr bg="blue.100">
+                    <Td fontWeight={"bold"} bg="blue.100">
+                      Experience
+                    </Td>
+                    <Td>{physioInfo.experience}</Td>
+                  </Tr>
+                  <Tr>
+                    <Td fontWeight={"bold"}>Qualifications</Td>
+                    <Td>{physioInfo.qualifications}</Td>
+                  </Tr>
+                  <Tr bg="blue.100">
+                    <Td fontWeight={"bold"}>Areas of Expertise</Td>
+                    <Td>{physioInfo.areasOfExpertise.join(", ")}</Td>
+                  </Tr>
+                  <Tr>
+                    <Td fontWeight={"bold"}>Languages</Td>
+                    <Td>{physioInfo.languages.join(", ")}</Td>
+                  </Tr>
+                </Tbody>
+              </Table>
+            </Box>
+            <Box my={"2%"} bg="blue.100" w="50%" mr={"1%"} px={1} w={"100%"}>
+            <Heading>Dr. Physio</Heading>
+            <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
+            <Heading size={"md"}> Education & Qualifications </Heading>
+            <Text mb={2}>
+
+            </Text>
+            <Heading size={"md"}>Professional Experience</Heading>
+            <Text mb={2} textAlign="justify">
+
+            </Text>
+            <Heading size={"md"}>Special Interests & Achievements</Heading>
+            <Text mb={2} textAlign="physioInfojustify">
+
+            </Text>
+            <Heading size={"md"}> Current Position</Heading>
+            <Text textAlign="justify">
+
+            </Text>
+          </Box>
+          </Flex>
+          <Flex w="50%">
+            <Box bg="blue.50" m={"2%"}>
+              <Image src={doctorImage2} w={300}  maxH={300}/>
+              <Table w={300}>
+                <Tbody>
+                  <Tr bg="blue.100">
+                    <Td fontWeight={"bold"} bg="blue.100">
+                      Experience
+                    </Td>
+                    <Td>{orthoInfo.experience}</Td>
+                  </Tr>
+                  <Tr>
+                    <Td fontWeight={"bold"}>Qualifications</Td>
+                    <Td>{orthoInfo.qualifications}</Td>
+                  </Tr>
+                  <Tr bg="blue.100">
+                    <Td fontWeight={"bold"}>Areas of Expertise</Td>
+                    <Td>{orthoInfo.areasOfExpertise.join(", ")}</Td>
+                  </Tr>
+                  <Tr>
+                    <Td fontWeight={"bold"}>Languages</Td>
+                    <Td>{orthoInfo.languages.join(", ")}</Td>
+                  </Tr>
+                </Tbody>
+              </Table>
+            </Box>
+            <Box my={"2%"} bg="blue.100" w="50%" mr={"1%"} px={1} >
+            <Heading>Dr. Ortho</Heading>
+            <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
+            <Heading size={"md"}> Education & Qualifications </Heading>
+            <Text mb={2}>
+
+            </Text>
+            <Heading size={"md"}>Professional Experience</Heading>
+            <Text mb={2} textAlign="justify">
+
+            </Text>
+            <Heading size={"md"}>Special Interests & Achievements</Heading>
+            <Text mb={2} textAlign="justify">
+
+            </Text>
+            <Heading size={"md"}> Current Position</Heading>
+            <Text textAlign="justify">
+
+            </Text>
+          </Box>
+          </Flex>          
+        </Flex>
       </Flex>
     </Container>
   );

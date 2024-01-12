@@ -45,6 +45,7 @@ function Navbar() {
     position={hasShadow ? 'sticky' : 'relative'}
     top="0"
     boxShadow={hasShadow ? '0px 2px 4px rgba(0, 0, 0, 0.5)' : 'none'}
+    opacity={hasShadow? 0.9: 'none'}
     zIndex="999"
     >
       <Image
@@ -84,13 +85,13 @@ function Navbar() {
             <NavLink to="/contact-us">CONTACT US</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/blog">BLOG</NavLink>
+            <NavLink to="/blog">REVIEWS</NavLink>
           </MenuItem>
         </MenuList>
       </Menu>
 
-      <Flex w="full" display={{ base: "none", md: "flex" }}>
-        <Button variant={"navbarbutton"} _hover>
+      <Flex w="full" display={{ base: "none", md: "flex" }} >
+        <Button variant={"navbarbutton"}>
           <NavLink to="/">Home</NavLink>
         </Button>
 
@@ -111,7 +112,7 @@ function Navbar() {
         </Button>
 
         <Button variant={"navbarbutton"}>
-          <NavLink to="/blog">BLOG</NavLink>
+          <NavLink to="/blog">REVIEWS</NavLink>
         </Button>
       </Flex>
     </Flex>

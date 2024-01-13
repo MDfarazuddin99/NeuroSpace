@@ -64,7 +64,7 @@ const Shakeeb = () => {
         <Flex>
           <Box bg="blue.50" m={"2%"}>
             <Image src={shakeebImage} w={400} />
-            <Table>
+            <Table w={400}>
               <Tbody>
                 <Tr bg="blue.100">
                   <Td fontWeight={"bold"} bg="blue.100">
@@ -137,9 +137,6 @@ const Shakeeb = () => {
             </Text>
           </Box>
         </Flex>
-
-
-
         <Heading>
           Additional Doctors
         </Heading>
@@ -217,7 +214,7 @@ const Shakeeb = () => {
                 </Tbody>
               </Table>
             </Box>
-            <Box my={"2%"} bg="blue.100" w="50%" mr={"1%"} px={1} >
+            <Box my={"2%"} bg="blue.100" w="50%" mr={"1%"} px={1} w={'100%'}>
             <Heading>Dr. Ortho</Heading>
             <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
             <Heading size={"md"}> Education & Qualifications </Heading>

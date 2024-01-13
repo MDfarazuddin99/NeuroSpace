@@ -1,9 +1,7 @@
-import { Container, Flex, Heading, Image, Box } from "@chakra-ui/react";
-import ReactFloaterJs from "react-floaterjs";
+import { Flex, Heading, Image, Box } from "@chakra-ui/react";
 
 import hplogo from "../../assets/homepagelogo.png";
 import shakeeb from "../../assets/Shakeeb.jpeg";
-import React from "react";
 import bgimage from "../../assets/bg_image.jpg";
 
 const Home = () => {

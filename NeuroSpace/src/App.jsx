@@ -14,8 +14,6 @@ import Blog from './components/mainContent/Blog';
 import { Route, Routes } from "react-router-dom";
 
 
-import bgimage from './assets/bg_image.jpg'
-
 function App() {
   return (
     <div >

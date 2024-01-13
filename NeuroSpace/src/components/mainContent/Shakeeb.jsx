@@ -97,10 +97,6 @@ const Shakeeb = () => {
         </Flex>
 
 
-
-
-
-
         <Heading>
           Additional Doctors
         </Heading>

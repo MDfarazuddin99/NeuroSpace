@@ -20,7 +20,7 @@ function Header(){
           </Text>          
           <Spacer display={{base: 'none', md: 'block'}}/>
           <Button bg={'orange'} rightIcon={<ArrowForwardIcon />} flex={"None"} mr={{md: "10%"}} _hover={{bg:'blue.50'}} mb={{base: 1, md : 0}}>
-          <Link to="/book-appointment">BOOK APPOINTMENT</Link>
+          <Link to="/contact-us">Contact Us</Link>
           </Button>
         </Flex>
 

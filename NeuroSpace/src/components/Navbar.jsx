@@ -79,9 +79,6 @@ function Navbar() {
             <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/book-appointment">BOOK APPOINTMENT</NavLink>
-          </MenuItem>
-          <MenuItem>
             <NavLink to="/contact-us">CONTACT US</NavLink>
           </MenuItem>
           <MenuItem>
@@ -101,10 +98,6 @@ function Navbar() {
 
         <Button variant={"navbarbutton"}>
           <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
-        </Button>
-
-        <Button variant={"navbarbutton"}>
-          <NavLink to="/book-appointment">BOOK APPOINTMENT</NavLink>
         </Button>
 
         <Button variant={"navbarbutton"}>

@@ -139,6 +139,7 @@ const Services = () => {
             <Image src={s1}/>
           </Flex>          
         </Flex>
+
       </Box>
     </Container>
   );

@@ -9,9 +9,7 @@ import {
   Tbody,
   Tr,
   Td,
-Spacer,
 } from "@chakra-ui/react";
-import { useRef } from "react";
 import shakeebImage from "../../assets/shakeeb.jpeg";
 import doctorImage1 from "../../assets/doctor1.jpeg";
 import doctorImage2 from "../../assets/doctor2.jpeg";
@@ -41,17 +39,6 @@ const Shakeeb = () => {
     languages: ["English"],
   };
   
-  const orthoInfo = {
-    name: "Dr. James Anderson",
-    experience: "10+ years",
-    qualifications: "MBBS, MS Orthopedics",
-    areasOfExpertise: [
-      "Arthroscopy",
-      "Spine Surgery",
-    ],
-    languages: ["English"],
-  };
-
   return (
     <Container variant={"main"} py={"2vh"}>
       <Flex

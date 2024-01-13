@@ -101,7 +101,7 @@ const Services = () => {
             <Heading> Neuro Services</Heading>
             <Image src={s1}/>
           </Flex>
-          <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(5, 1fr)"}} gap={6} p={"1%"} w="100%">
+          <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(5, 1fr)"}} gap={6} p={"2%"} w="100%">
             {neuroservices.map((ns) => (
               <Card
                 _hover={{

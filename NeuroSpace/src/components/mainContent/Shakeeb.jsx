@@ -120,7 +120,7 @@ const Shakeeb = () => {
         <Flex flexDirection={{md: 'row', base:'column'}} w="100%" m={'1%'}>
           <Flex w={{md: "50%", base:"100%"}} flexDirection={{md: 'row', base:'column'}}>
             <Box bg="blue.50" m={"2%"}>
-              <Image src={doctorImage1} w={{base: "100%", md: 300}}/>
+              <Image src={doctorImage1} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
               <Table w={{base: "100%", md: 300}}>
                 <Tbody>
                   <Tr bg="blue.100">
@@ -165,34 +165,34 @@ const Shakeeb = () => {
             </Text>
           </Box>
           </Flex>
-          <Flex w="50%">
+          <Flex w={{md: "50%", base:"100%"}} flexDirection={{md: 'row', base:'column'}}>
             <Box bg="blue.50" m={"2%"}>
-              <Image src={doctorImage2} w={300}  maxH={300}/>
-              <Table w={300}>
+              <Image src={doctorImage2} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
+              <Table w={{base: "100%", md: 300}}>
                 <Tbody>
                   <Tr bg="blue.100">
                     <Td fontWeight={"bold"} bg="blue.100">
                       Experience
                     </Td>
-                    <Td>{orthoInfo.experience}</Td>
+                    <Td>{physioInfo.experience}</Td>
                   </Tr>
                   <Tr>
                     <Td fontWeight={"bold"}>Qualifications</Td>
-                    <Td>{orthoInfo.qualifications}</Td>
+                    <Td>{physioInfo.qualifications}</Td>
                   </Tr>
                   <Tr bg="blue.100">
                     <Td fontWeight={"bold"}>Areas of Expertise</Td>
-                    <Td>{orthoInfo.areasOfExpertise.join(", ")}</Td>
+                    <Td>{physioInfo.areasOfExpertise.join(", ")}</Td>
                   </Tr>
                   <Tr>
                     <Td fontWeight={"bold"}>Languages</Td>
-                    <Td>{orthoInfo.languages.join(", ")}</Td>
+                    <Td>{physioInfo.languages.join(", ")}</Td>
                   </Tr>
                 </Tbody>
               </Table>
             </Box>
-            <Box my={"2%"} bg="blue.100" w="50%" mr={"1%"} px={1} w={'100%'}>
-            <Heading>Dr. Ortho</Heading>
+            <Box my={"2%"} bg="blue.100" mr={"1%"} px={1} w={"100%"}>
+            <Heading>Dr. Physio</Heading>
             <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
             <Heading size={"md"}> Education & Qualifications </Heading>
             <Text mb={2}>
@@ -203,7 +203,7 @@ const Shakeeb = () => {
 
             </Text>
             <Heading size={"md"}>Special Interests & Achievements</Heading>
-            <Text mb={2} textAlign="justify">
+            <Text mb={2} textAlign="physioInfojustify">
 
             </Text>
             <Heading size={"md"}> Current Position</Heading>
@@ -211,7 +211,7 @@ const Shakeeb = () => {
 
             </Text>
           </Box>
-          </Flex>          
+          </Flex>     
         </Flex>
       </Flex>
     </Container>

@@ -71,9 +71,13 @@ const Home = () => {
             </Box>
           </Carousel>
         </Flex>
-        <Flex bg="red" w="70%" mx="15%" mb={100}>
+        <Flex bg="red" w="70%" mx="15%" mb={100} display={{base:'none', md: 'initial'}}>
         <iframe  width="100%" height="600" src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </Flex>
+        <Flex bg="red" w="70%" mx="15%" mb={100} display={{base:'initial', md: 'none'}}>
+        <iframe  width="100%" height="auto" src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </Flex>
+
       </Flex>
 
 

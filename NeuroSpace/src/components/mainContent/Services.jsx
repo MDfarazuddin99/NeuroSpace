@@ -25,6 +25,9 @@ import vertigo from "../../assets/neuroservices/vertigo.png";
 
 import s1 from "../../assets/sample1.png"
 
+import s5 from "../../assets/sample5.png"
+
+
 const Services = () => {
   const neuroservices = [
     {
@@ -98,7 +101,7 @@ const Services = () => {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Heading> Neuro Services</Heading>
+            <Heading> Treatments provided</Heading>
             <Image src={s1}/>
           </Flex>
           <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(5, 1fr)"}} gap={6} p={"2%"} w="100%">
@@ -135,8 +138,8 @@ const Services = () => {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Heading> Ortho Services</Heading>
-            <Image src={s1}/>
+            <Heading> Pharma Services</Heading>
+            <Image src={s5}/>
           </Flex>          
         </Flex>
 

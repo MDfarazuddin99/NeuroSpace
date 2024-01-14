@@ -58,16 +58,16 @@ const Home = () => {
             p={3}
           />
         </Flex>
-        <Flex w={{base:"95%", md:"90%"}} mx={{base:"2.5%", md:"5%"}}>
+        <Flex w="100%">
           <Carousel centerMode="True" autoPlay="True" infiniteLoop="True" showArrows="True">
             <Box>
-              <Image src={c1} h={"50vh"} />
+              <Image src={c1} h={"60vh"} />
             </Box>
             <Box>
-              <Image src={c2} h={"50vh"} />
+              <Image src={c2} h={"60vh"} />
             </Box>
             <Box>
-              <Image src={c3} h={"50vh"} />
+              <Image src={c3} h={"60vh"} />
             </Box>
           </Carousel>
         </Flex>

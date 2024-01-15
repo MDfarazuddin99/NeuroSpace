@@ -7,7 +7,8 @@ import bgimage from "../../assets/bg_image.jpg";
 import c1 from "../../assets/clinic/clinic1.jpg";
 import c2 from "../../assets/clinic/clinic2.jpg";
 import c3 from "../../assets/clinic/clinic3.jpg";
-import c4 from "../../assets/clinic/clinic4.jpg";
+import c6 from "../../assets/clinic/clinic6.png";
+import c5 from "../../assets/clinic/clinic5.png";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -65,9 +66,12 @@ const Home = () => {
             infiniteLoop="True"
             showArrows="True"
           >
-            <Image src={c1} h={"50vh"} objectFit={"cover"} />
-            <Image src={c2} h={"50vh"} objectFit={"cover"} />
-            <Image src={c3} h={"50vh"} objectFit={"cover"} />
+            <Image src={c6} h={"60vh"}  />
+            <Image src={c1} h={"60vh"} objectFit={"cover"} />
+            <Image src={c2} h={"60vh"} objectFit={"cover"} />
+            <Image src={c3} h={"60vh"} objectFit={"cover"} />
+            <Image src={c5} h={"60vh"} objectFit={"cover"} />
+
           </Carousel>
         </Flex>
         <Flex backdropFilter="blur(5px)" justifyContent={"center"}>

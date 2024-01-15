@@ -39,13 +39,13 @@ const Home = () => {
               <Heading
                 fontSize={{ md: "9xl", base: "3xl" }}
                 color="white"
-                bgGradient="linear(to-r, blue.500, teal.500)"
+                bgGradient="linear(to-r, blue.900, teal.500)"
                 bgClip="text"
                 fontWeight="bold"
               >
                 NeuroSpace
               </Heading>
-              <Heading fontSize={{ md: "4xl", base: "md" }} color={"gray.50"}>
+              <Heading fontSize={{ md: "4xl", base: "md" }} color={"blue.900"}>
                 Excellence in Brain, Spine and Pain Care
               </Heading>
             </Box>

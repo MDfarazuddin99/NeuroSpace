@@ -73,30 +73,31 @@ const Home = () => {
               <Image src={c3} h={"50vh"} objectFit={"cover"} />
           </Carousel>
         </Flex>
-        <Flex backdropFilter="blur(5px)">
-        <Flex
-          w={{ md: "70%", base: "90%" }}
-          mx={{ base: "5%", md: "15%" }}
-          mb={100}
-          display={{ base: "none", md: "initial" }}
-        >
-          <iframe
-            width="100%"
-            height="600"
-            src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </Flex>
-        <Flex display={{ base: "initial", md: "none" }}>
-          <iframe
-            src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </Flex>          
+        <Flex backdropFilter="blur(5px)" mb={"10%"}               justifyContent={'center'}>   
+            <Flex
+              display={{ base: "none", md: "initial" }}
+            >
+              <iframe
+                width="1200"
+                height="700"
+                src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </Flex>
+
+            <Flex display={{ base: "initial", md: "none" }} > 
+              <iframe
+              width ='350'
+              height='200'
+
+                src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </Flex>          
         </Flex>
       </Flex>
     </Flex>

@@ -44,7 +44,6 @@ const theme = extendTheme({
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           minW: "full",
-         
         },
       },
     },

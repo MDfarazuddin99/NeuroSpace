@@ -87,9 +87,11 @@ const Services = () => {
       img: vertigo,
     },
   ];
+  
   return (
-    <Container variant={"main"} py={"2vh"}>
-      <Box minH="1000px" w={{md: "75%", base: "95%"}} mx={{md: "12.5%", base: "2.5%"}} bg="blue.50">
+    <Container variant={"main"} p={0}>
+      <Flex backdropFilter="blur(5px)">
+      <Box minH="1000px" w={{md: "75%", base: "95%"}} mx={{md: "12.5%", base: "2.5%"}} bg="blue.50" m={"1%"}>
         <Flex
           flexDirection="column"
           justifyContent={"center"}
@@ -142,8 +144,8 @@ const Services = () => {
             <Image src={s5}/>
           </Flex>          
         </Flex>
-
-      </Box>
+      </Box>        
+      </Flex>
     </Container>
   );
 };

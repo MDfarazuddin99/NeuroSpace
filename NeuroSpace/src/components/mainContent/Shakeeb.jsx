@@ -38,15 +38,18 @@ const Shakeeb = () => {
     ],
     languages: ["English"],
   };
-  
+  // backdropFilter="blur(10px)"
   return (
-    <Container variant={"main"} py={"2vh"}>
+    <Container variant={"main"} py={"2vh"} p={0}>
+      <Flex backdropFilter="blur(5px)">
       <Flex
+      my={'1%'}
         w={{md: "75%", base: "90%"}}
         mx={{md: "12.5%", base: "5%"}}
         flexDirection="column"
         align="center"
         bg="blue.50"
+        
       >
         <Flex flexDirection={{base: 'column', md: 'row'}} w="100%" >
           <Box bg="blue.50" m={"2%"} >
@@ -196,6 +199,7 @@ const Shakeeb = () => {
           </Box>
           </Flex>     
         </Flex>
+      </Flex>        
       </Flex>
     </Container>
   );

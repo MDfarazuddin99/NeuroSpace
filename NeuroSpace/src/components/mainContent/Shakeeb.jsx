@@ -9,6 +9,7 @@ import {
   Tbody,
   Tr,
   Td,
+  Center,
 } from "@chakra-ui/react";
 import shakeebImage from "../../assets/shakeeb.jpeg";
 import doctorImage1 from "../../assets/doctor1.jpeg";
@@ -53,7 +54,12 @@ const Shakeeb = () => {
       >
         <Flex flexDirection={{base: 'column', md: 'row'}} w="100%" >
           <Box bg="blue.50" m={"2%"} >
-            <Image src={shakeebImage} w={{base: "100%", md: 400}} />
+            <Flex flexDirection={'column'} alignItems={'center'}>
+                <Heading>
+                  Dr. Shakeeb Ahrar
+                </Heading>
+              <Image src={shakeebImage} w={{base: "100%", md: 400}} />
+            </Flex>
             <Table w={{base: "100%", md: 400}}>
               <Tbody>
                 <Tr bg="blue.100">
@@ -106,7 +112,12 @@ const Shakeeb = () => {
         <Flex flexDirection={{md: 'row', base:'column'}} w="100%" m={'1%'}>
           <Flex w={{md: "50%", base:"100%"}} flexDirection={{md: 'row', base:'column'}}>
             <Box bg="blue.50" m={"2%"}>
-              <Image src={doctorImage1} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
+            <Flex flexDirection={'column'} alignItems={'center'}>
+                <Heading>
+                  Dr. Physio 
+                </Heading>
+                <Image src={doctorImage1} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
+            </Flex>              
               <Table w={{base: "100%", md: 300}}>
                 <Tbody>
                   <Tr bg="blue.100">
@@ -153,7 +164,12 @@ const Shakeeb = () => {
           </Flex>
           <Flex w={{md: "50%", base:"100%"}} flexDirection={{md: 'row', base:'column'}}>
             <Box bg="blue.50" m={"2%"}>
-              <Image src={doctorImage2} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
+            <Flex flexDirection={'column'} alignItems={'center'}>
+                <Heading>
+                  Dr. Ortho
+                </Heading>
+                <Image src={doctorImage2} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
+            </Flex>                   
               <Table w={{base: "100%", md: 300}}>
                 <Tbody>
                   <Tr bg="blue.100">

@@ -99,7 +99,9 @@ function Navbar() {
         <Button variant={"navbarbutton"}>
           <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
         </Button>
-
+        <Button variant={"navbarbutton"}>
+          <NavLink to="/team">TEAM</NavLink>
+        </Button> 
         <Button variant={"navbarbutton"}>
           <NavLink to="/contact-us">CONTACT US</NavLink>
         </Button>
@@ -107,6 +109,7 @@ function Navbar() {
         <Button variant={"navbarbutton"}>
           <NavLink to="/blog">REVIEWS</NavLink>
         </Button>
+       
       </Flex>
     </Flex>
   );

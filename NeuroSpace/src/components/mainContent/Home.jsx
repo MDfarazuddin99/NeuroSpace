@@ -6,9 +6,12 @@ import bgimage from "../../assets/bg_image.jpg";
 
 import c1 from "../../assets/clinic/clinic1.jpg";
 import c2 from "../../assets/clinic/clinic2.jpg";
-import c3 from "../../assets/clinic/clinic3.jpg";
+// import c3 from "../../assets/electrophys.jpeg"
 import c6 from "../../assets/clinic/clinic6.png";
 import c5 from "../../assets/clinic/clinic5.png";
+import c7 from "../../assets/clinicimage.jpeg";
+import c3 from "../../assets/home_slide_show.jpg";
+
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -59,7 +62,7 @@ const Home = () => {
             p={3}
           />
         </Flex>
-        <Flex backdropFilter=" blur(10px)">
+        <Flex width={"75%"} mx="12.5%">
           <Carousel
             centerMode="True"
             autoPlay="True"
@@ -71,31 +74,9 @@ const Home = () => {
             <Image src={c2} h={"60vh"} objectFit={"cover"} />
             <Image src={c3} h={"60vh"} objectFit={"cover"} />
             <Image src={c5} h={"60vh"} objectFit={"cover"} />
+            <Image src={c7} h={"60vh"} objectFit={"cover"} />
 
           </Carousel>
-        </Flex>
-        <Flex backdropFilter="blur(5px)" justifyContent={"center"}>
-          <Flex display={{ base: "none", md: "initial" }}>
-            <iframe
-              width="1200"
-              height="700"
-              src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </Flex>
-
-          <Flex display={{ base: "initial", md: "none" }}>
-            <iframe
-              width="350"
-              height="200"
-              src="https://www.youtube.com/embed/1rRSgqcqdn4?si=D8xU925dm805PlRu"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </Flex>
         </Flex>
       </Flex>
     </Flex>

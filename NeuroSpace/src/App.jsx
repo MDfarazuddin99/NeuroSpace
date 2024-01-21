@@ -11,6 +11,7 @@ import Shakeeb from './components/mainContent/Shakeeb';
 import BookAppointment from './components/mainContent/BookAppointment';
 import ContactUs from './components/mainContent/ContactUs';
 import Blog from './components/mainContent/Blog';
+import Team from './components/mainContent/Team';
 import { Route, Routes } from "react-router-dom";
 
 
@@ -37,6 +38,10 @@ function App() {
 
             <Route path="blog" Component={Blog}>
             </Route>
+
+            <Route path="/team" Component={Team}>
+            </Route>
+
           </Routes>         
 
         <Footer/>

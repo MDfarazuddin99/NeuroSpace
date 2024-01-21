@@ -10,13 +10,13 @@ function Header(){
 
         >
           <Text  fontSize={{base: 'md', md:'xl'}} fontWeight={'bold'} ml={{base: 0, md: "5%"}} mt={{base: 1, md: 0}}>
-            MON-SAT: 8AM – 12PM  |   5PM – 9PM
+            MON-SAT: 5PM – 9PM
           </Text>
           <Text  fontSize={{base: 'md', md:'xl'}} fontWeight={'bold'} ml={{base: 0, md: "5%"}} mt={{base: 1, md: 0}}>
             <Icon as={FaLocationDot}/> Mehdipatnam, Hyderabad
           </Text>
           <Text  fontSize={{base: 'md', md:'xl'}} fontWeight={'bold'} ml={{base: 0, md: "5%"}} mt={{base: 1, md: 0}}>
-            <Icon as={FaPhoneAlt}/> 7989139642
+            <Icon as={FaPhoneAlt}/> 7032107724
           </Text>          
           <Spacer display={{base: 'none', md: 'block'}}/>
           <Button bg={'orange'} rightIcon={<ArrowForwardIcon />} flex={"None"} mr={{md: "10%"}} _hover={{bg:'blue.50'}} mb={{base: 1, md : 0}}>

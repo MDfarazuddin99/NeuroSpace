@@ -10,215 +10,126 @@ import {
   Tr,
   Td,
   Center,
+  UnorderedList,
+  ListItem
 } from "@chakra-ui/react";
-import shakeebImage from "../../assets/shakeeb.jpeg";
-import doctorImage1 from "../../assets/doctor1.jpeg";
-import doctorImage2 from "../../assets/doctor2.jpeg";
 
+import shakeebImage from "../../assets/shakeeb.jpeg";
 
 const Shakeeb = () => {
   const shakeebInfo = {
-    experience: "7+ years",
-    qualifications: "MBBS, DNB GENERAL MEDICINE, DNB NEUROLOGY",
+    experience: "10+ years",
+    qualifications: "MBBS, MD GENERAL MEDICINE, DM NEUROLOGY (NIMS) 🥇 ",
     areasOfExpertise: [
       "Headache",
-      "Back pain",
-      "Neck pain",
+      "Back and Neck pain",
       "Stroke",
       "Seizures",
+      "Parkinsons Disease",
+      "Vertigo",
+      "Peripheral Neuropathy",
+      "Myasthenia Gravis",
+      "Botox Therapy",
+      "Electrophysiological Studies",
     ],
     languages: ["English", "Hindi", "Telugu"],
+    number:"75033"
   };
 
-  const physioInfo = {
-    name: "Dr. Emma Smith",
-    experience: "8+ years",
-    qualifications: "BPT, MPT in Orthopedics",
-    areasOfExpertise: [
-      "Sports Injuries",
-    ],
-    languages: ["English"],
-  };
   // backdropFilter="blur(10px)"
   return (
     <Container variant={"main"} py={"2vh"} p={0}>
       <Flex backdropFilter="blur(5px)">
-      <Flex
-      my={'1%'}
-        w={{md: "75%", base: "90%"}}
-        mx={{md: "12.5%", base: "5%"}}
-        flexDirection="column"
-        align="center"
-        bg="blue.50"
-        
-      >
-        <Flex flexDirection={{base: 'column', md: 'row'}} w="100%" >
-          <Box bg="blue.50" m={"2%"} >
-            <Flex flexDirection={'column'} alignItems={'center'}>
-                <Heading>
-                  Dr. Shakeeb Ahrar
-                </Heading>
-              <Image src={shakeebImage} w={{base: "100%", md: 400}} />
-            </Flex>
-            <Table w={{base: "100%", md: 400}}>
-              <Tbody>
-                <Tr bg="blue.100">
-                  <Td fontWeight={"bold"} bg="blue.100">
-                    Experience
-                  </Td>
-                  <Td>{shakeebInfo.experience}</Td>
-                </Tr>
-                <Tr>
-                  <Td fontWeight={"bold"}>Qualifications</Td>
-                  <Td>{shakeebInfo.qualifications}</Td>
-                </Tr>
-                <Tr bg="blue.100">
-                  <Td fontWeight={"bold"}>Areas of Expertise</Td>
-                  <Td>{shakeebInfo.areasOfExpertise.join(", ")}</Td>
-                </Tr>
-                <Tr>
-                  <Td fontWeight={"bold"}>Languages</Td>
-                  <Td>{shakeebInfo.languages.join(", ")}</Td>
-                </Tr>
-              </Tbody>
-            </Table>
-          </Box>
-          <Box my={"2%"} bg="blue.100" w="100%" mr={"1%"} px={1}>
-            <Heading>Dr. Shakeeb Ahrar</Heading>
-            <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
-            <Heading size={"md"}> Education & Qualifications </Heading>
-            <Text mb={2}>
-
-            </Text>
-            <Heading size={"md"}>Professional Experience</Heading>
-            <Text mb={2} textAlign="justify">
-
-            </Text>
-            <Heading size={"md"}>Special Interests & Achievements</Heading>
-            <Text mb={2} textAlign="justify">
-
-            </Text>
-            <Heading size={"md"}> Current Position</Heading>
-            <Text textAlign="justify">
-
-            </Text>
-          </Box>
-        </Flex>
-
-
-        <Heading>
-          Additional Doctors
-        </Heading>
-        <Flex flexDirection={{md: 'row', base:'column'}} w="100%" m={'1%'}>
-          <Flex w={{md: "50%", base:"100%"}} flexDirection={{md: 'row', base:'column'}}>
+        <Flex
+          my={"1%"}
+          w={{ md: "75%", base: "90%" }}
+          mx={{ md: "12.5%", base: "5%" }}
+          flexDirection="column"
+          align="center"
+          bg="blue.50"
+        >
+          <Flex flexDirection={{ base: "column", md: "row" }} w="100%">
             <Box bg="blue.50" m={"2%"}>
-            <Flex flexDirection={'column'} alignItems={'center'}>
-                <Heading>
-                  Dr. Physio 
-                </Heading>
-                <Image src={doctorImage1} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
-            </Flex>              
-              <Table w={{base: "100%", md: 300}}>
+              <Flex flexDirection={"column"} alignItems={"center"}>
+                <Heading display={{base:'initial', md:'none'}}>Dr. Shakeeb Ahrar</Heading>
+                <Image src={shakeebImage} w={{ base: "100%", md: 400 }} />
+              </Flex>
+              <Table w={{ base: "100%", md: 400 }}>
                 <Tbody>
                   <Tr bg="blue.100">
                     <Td fontWeight={"bold"} bg="blue.100">
                       Experience
                     </Td>
-                    <Td>{physioInfo.experience}</Td>
+                    <Td>{shakeebInfo.experience}</Td>
                   </Tr>
                   <Tr>
                     <Td fontWeight={"bold"}>Qualifications</Td>
-                    <Td>{physioInfo.qualifications}</Td>
+                    <Td>{shakeebInfo.qualifications}</Td>
                   </Tr>
                   <Tr bg="blue.100">
                     <Td fontWeight={"bold"}>Areas of Expertise</Td>
-                    <Td>{physioInfo.areasOfExpertise.join(", ")}</Td>
+                    <Td>{shakeebInfo.areasOfExpertise.join(", ")}</Td>
                   </Tr>
                   <Tr>
                     <Td fontWeight={"bold"}>Languages</Td>
-                    <Td>{physioInfo.languages.join(", ")}</Td>
+                    <Td>{shakeebInfo.languages.join(", ")}</Td>
                   </Tr>
+                  <Tr bg="blue.100">
+                    <Td fontWeight={"bold"}>Registration No.:</Td>
+                    <Td>{shakeebInfo.number}</Td>
+                  </Tr>                  
                 </Tbody>
               </Table>
             </Box>
-            <Box my={"2%"} bg="blue.100" mr={"1%"} px={1} w={"100%"}>
-            <Heading>Dr. Physio</Heading>
-            <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
-            <Heading size={"md"}> Education & Qualifications </Heading>
-            <Text mb={2}>
+            <Box my={"2%"} bg="blue.100" w="100%" mr={"1%"} px={1} fontSize={'20px'}>
+              <Heading color="blue.900" >Dr. Shakeeb Ahrar</Heading>
+              <Text mb={2} fontWeight={'bold'} >Neurology Specialist in Mehdipatnam, Hyderabad</Text>
 
-            </Text>
-            <Heading size={"md"}>Professional Experience</Heading>
-            <Text mb={2} textAlign="justify">
-
-            </Text>
-            <Heading size={"md"}>Special Interests & Achievements</Heading>
-            <Text mb={2} textAlign="physioInfojustify">
-
-            </Text>
-            <Heading size={"md"}> Current Position</Heading>
-            <Text textAlign="justify">
-
-            </Text>
-          </Box>
+              <Text mb={2} textAlign="justify">
+                Dr. Shakeeb ahrar is a practicing consultant neurophysician in
+                hyderabad with a good clinical experience of 10 years in the
+                field of medicine. After being trained in the field of Internal
+                Medicine for 3 years, he was among the top few students in the
+                post graduate examinations and had worked as a senior resident
+                in Gandhi medical college . He has received his Doctorate of
+                medicine (DM) in Neurology from the prestigious Nizam's
+                Institute of Medical Sciences (NIMS), Hyderabad.
+              </Text>
+              <Text mb={2} textAlign="justify">
+                He exhibits, professionalism in his work , is compassionate and
+                strives to provide the best possible care towards his patients.
+                He exhibits clinical expertise in diagnosing and treating
+                conditions like:
+                <UnorderedList>
+                  <ListItem>Stroke</ListItem>
+                  <ListItem>Epilepsy/seizures</ListItem>
+                  <ListItem>Headache/migraine</ListItem>
+                  <ListItem>Parkinson's disease</ListItem>
+                  <ListItem>Dementia including Alzheimer's disease</ListItem>
+                  <ListItem>Vertigo</ListItem>
+                  <ListItem>Peripheral neuropathy</ListItem>
+                  <ListItem>Movement disorders</ListItem>
+                  <ListItem>Muscular disorder</ListItem>
+                  <ListItem>Myasthenia Gravis</ListItem>
+                  <ListItem>
+                    Neuroinflammatory diseases like Multiple sclerosis and
+                    Neuromyelitis optica
+                  </ListItem>
+                  <ListItem>Neck pain</ListItem>
+                  <ListItem>Back pain</ListItem>
+                  <ListItem>Rare neurological disorders</ListItem>
+                </UnorderedList>
+                His other areas of interest are in electrophysiological studies
+                and botox therapy.
+              </Text>
+            </Box>
           </Flex>
-          <Flex w={{md: "50%", base:"100%"}} flexDirection={{md: 'row', base:'column'}}>
-            <Box bg="blue.50" m={"2%"}>
-            <Flex flexDirection={'column'} alignItems={'center'}>
-                <Heading>
-                  Dr. Ortho
-                </Heading>
-                <Image src={doctorImage2} w={{base: "100%", md: 300}} aspectRatio={'1'}/>
-            </Flex>                   
-              <Table w={{base: "100%", md: 300}}>
-                <Tbody>
-                  <Tr bg="blue.100">
-                    <Td fontWeight={"bold"} bg="blue.100">
-                      Experience
-                    </Td>
-                    <Td>{physioInfo.experience}</Td>
-                  </Tr>
-                  <Tr>
-                    <Td fontWeight={"bold"}>Qualifications</Td>
-                    <Td>{physioInfo.qualifications}</Td>
-                  </Tr>
-                  <Tr bg="blue.100">
-                    <Td fontWeight={"bold"}>Areas of Expertise</Td>
-                    <Td>{physioInfo.areasOfExpertise.join(", ")}</Td>
-                  </Tr>
-                  <Tr>
-                    <Td fontWeight={"bold"}>Languages</Td>
-                    <Td>{physioInfo.languages.join(", ")}</Td>
-                  </Tr>
-                </Tbody>
-              </Table>
-            </Box>
-            <Box my={"2%"} bg="blue.100" mr={"1%"} px={1} w={"100%"}>
-            <Heading>Dr. Physio</Heading>
-            <Text mb={2}>Neurology Specialist in Attapur, Hyderabad</Text>
-            <Heading size={"md"}> Education & Qualifications </Heading>
-            <Text mb={2}>
-
-            </Text>
-            <Heading size={"md"}>Professional Experience</Heading>
-            <Text mb={2} textAlign="justify">
-
-            </Text>
-            <Heading size={"md"}>Special Interests & Achievements</Heading>
-            <Text mb={2} textAlign="physioInfojustify">
-
-            </Text>
-            <Heading size={"md"}> Current Position</Heading>
-            <Text textAlign="justify">
-
-            </Text>
-          </Box>
-          </Flex>     
         </Flex>
-      </Flex>        
       </Flex>
     </Container>
   );
 };
+
+//
 
 export default Shakeeb;

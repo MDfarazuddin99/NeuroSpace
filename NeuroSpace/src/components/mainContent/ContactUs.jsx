@@ -10,7 +10,7 @@ const ContactUs = () => {
       <Flex backdropFilter="blur(5px)">
       <Flex bg="blue.50" w="75%" mx="12.5%" flexDir={'column'}>
           <Flex bg="blue.50" w="100%" flexDirection={{md:'row',base:"column"}} fontSize={'lg'} px="2%">
-            <VStack mr={"5%"}   my={"2%"} >
+            <VStack my={"2%"} >
               <Heading fontSize={'3xl'}>
                 Contact Us Anytime,
               </Heading>
@@ -18,15 +18,15 @@ const ContactUs = () => {
               7 days a Week
               </Heading>
             </VStack>
-            <Flex flexDir={'column'} mr="5%"  my="2%">
+            <Flex flexDir={'column'} mr="3%"  my="2%">
               <Text fontWeight={'bold'} mb="2%">Contact Info</Text>
-              <HStack mb="2%"><Icon as={FaLocationDot}/><Text> Vinayak Nagar, Hydershakote, Bandlaguda Jagir, Telangana 500091</Text></HStack>
-              <HStack ><PhoneIcon/><Text>09618994555</Text></HStack>
+              <HStack mb="2%"><Icon as={FaLocationDot}/><Text>  Ground Floor, 12-2-727/44, Ring Road, Rethi Bowli Rd, opposite Pillar no 45, Mehdipatnam, Hyderabad, Telangana 500028</Text></HStack>
+              <HStack ><PhoneIcon/><Text>7032107724</Text></HStack>
             </Flex>
             <Flex flexDir={'column'}  my="2%" >
               <Text fontWeight={'bold'} mb="5%">Open Hours</Text>
-              <HStack mb="5%"><CalendarIcon/><Text>Monday - Sunday</Text></HStack>
-              <HStack ><TimeIcon/><Text>8am-12pm & 5pm-9pm</Text></HStack>
+              <HStack mb="5%"><CalendarIcon/><Text>Monday - Saturday</Text></HStack>
+              <HStack ><TimeIcon/><Text>5pm-9pm</Text></HStack>
             </Flex>
           </Flex>
           <Flex display={{base: 'none', md: 'flex'}}justifyContent={'center'} m='2%'>

@@ -15,8 +15,6 @@ import { NavLink } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 
-
-
 function Navbar() {
   const [hasShadow, setHasShadow] = useState(false);
 
@@ -26,27 +24,26 @@ function Navbar() {
       setHasShadow(scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);  
+  }, []);
 
-  
   return (
     <Flex
-    bg="blue.50"
-    align="center"
-    justify="space-between"
-    direction="row"
-    px={{ base: "none", md: "5%" }}
-    w="100%"
-    position={hasShadow ? 'sticky' : 'relative'}
-    top="0"
-    boxShadow={hasShadow ? '0px 2px 4px rgba(0, 0, 0, 0.5)' : 'none'}
-    opacity={hasShadow? 0.9: 'none'}
-    zIndex="999"
+      bg="blue.50"
+      align="center"
+      justify="space-between"
+      direction="row"
+      px={{ base: "none", md: "5%" }}
+      w="100%"
+      position={hasShadow ? "sticky" : "relative"}
+      top="0"
+      boxShadow={hasShadow ? "0px 2px 4px rgba(0, 0, 0, 0.5)" : "none"}
+      opacity={hasShadow ? 0.9 : "none"}
+      zIndex="999"
     >
       <Image
         src={HeaderLogo}
@@ -79,15 +76,19 @@ function Navbar() {
             <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
           </MenuItem>
           <MenuItem>
+            <NavLink to="/team">TEAM</NavLink>
+          </MenuItem>          
+          <MenuItem>
             <NavLink to="/contact-us">CONTACT US</NavLink>
           </MenuItem>
+
           <MenuItem>
             <NavLink to="/blog">REVIEWS</NavLink>
           </MenuItem>
         </MenuList>
       </Menu>
 
-      <Flex w="full" display={{ base: "none", md: "flex" }} >
+      <Flex w="full" display={{ base: "none", md: "flex" }}>
         <Button variant={"navbarbutton"}>
           <NavLink to="/">Home</NavLink>
         </Button>
@@ -101,7 +102,7 @@ function Navbar() {
         </Button>
         <Button variant={"navbarbutton"}>
           <NavLink to="/team">TEAM</NavLink>
-        </Button> 
+        </Button>
         <Button variant={"navbarbutton"}>
           <NavLink to="/contact-us">CONTACT US</NavLink>
         </Button>
@@ -109,7 +110,6 @@ function Navbar() {
         <Button variant={"navbarbutton"}>
           <NavLink to="/blog">REVIEWS</NavLink>
         </Button>
-       
       </Flex>
     </Flex>
   );

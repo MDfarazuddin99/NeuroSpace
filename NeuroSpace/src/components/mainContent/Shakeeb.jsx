@@ -9,11 +9,12 @@ import {
   Tbody,
   Tr,
   Td,
-  Center,
-  UnorderedList,
-  ListItem
+  List,
+  ListItem,
+  ListIcon
 } from "@chakra-ui/react";
 
+import { MdCheckCircle } from "react-icons/md";
 import shakeebImage from "../../assets/shakeeb.jpeg";
 
 const Shakeeb = () => {
@@ -100,25 +101,25 @@ const Shakeeb = () => {
                 strives to provide the best possible care towards his patients.
                 He exhibits clinical expertise in diagnosing and treating
                 conditions like:
-                <UnorderedList>
-                  <ListItem>Stroke</ListItem>
-                  <ListItem>Epilepsy/seizures</ListItem>
-                  <ListItem>Headache/migraine</ListItem>
-                  <ListItem>Parkinson's disease</ListItem>
-                  <ListItem>Dementia including Alzheimer's disease</ListItem>
-                  <ListItem>Vertigo</ListItem>
-                  <ListItem>Peripheral neuropathy</ListItem>
-                  <ListItem>Movement disorders</ListItem>
-                  <ListItem>Muscular disorder</ListItem>
-                  <ListItem>Myasthenia Gravis</ListItem>
+                <List>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" /> Stroke</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Epilepsy/seizures</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Headache/migraine</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Parkinson's disease</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Dementia including Alzheimer's disease</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Vertigo</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Peripheral neuropathy</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Movement disorders</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Muscular disorder</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Myasthenia Gravis</ListItem>
                   <ListItem>
-                    Neuroinflammatory diseases like Multiple sclerosis and
+                  <ListIcon as={MdCheckCircle} color="green.500" />Neuroinflammatory diseases like Multiple sclerosis and
                     Neuromyelitis optica
                   </ListItem>
-                  <ListItem>Neck pain</ListItem>
-                  <ListItem>Back pain</ListItem>
-                  <ListItem>Rare neurological disorders</ListItem>
-                </UnorderedList>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Neck pain</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Back pain</ListItem>
+                  <ListItem><ListIcon as={MdCheckCircle} color="green.500" />Rare neurological disorders</ListItem>
+                </List>
                 His other areas of interest are in electrophysiological studies
                 and botox therapy.
               </Text>

@@ -43,8 +43,8 @@ const Shakeeb = () => {
       <Flex backdropFilter="blur(5px)">
         <Flex
           my={"1%"}
-          w={{ md: "75%", base: "90%" }}
-          mx={{ md: "12.5%", base: "5%" }}
+          w={{ md: "75%", base: "98%" }}
+          mx={{ md: "12.5%", base: "1%" }}
           flexDirection="column"
           align="center"
           bg="blue.50"
@@ -53,10 +53,10 @@ const Shakeeb = () => {
             <Box bg="blue.50" m={"2%"}>
               <Flex flexDirection={"column"} alignItems={"center"}>
                 <Heading display={{base:'initial', md:'none'}}>Dr. Shakeeb Ahrar</Heading>
-                <Image src={shakeebImage} w={{ base: "100%", md: 400 }} />
+                <Image src={shakeebImage} w={{ base: "100%", md: 400 }} aspectRatio={1} />
               </Flex>
-              <Table w={{ base: "100%", md: 400 }}>
-                <Tbody>
+              <Table w={{ base: "100%", md: 400 }} mx={0}>
+                <Tbody >
                   <Tr bg="blue.100">
                     <Td fontWeight={"bold"} bg="blue.100">
                       Experience

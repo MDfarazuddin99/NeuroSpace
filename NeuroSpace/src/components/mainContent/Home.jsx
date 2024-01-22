@@ -84,26 +84,9 @@ const Home = () => {
         >
           <Carousel autoPlay="true" infiniteLoop="true">
             {homeCarousel.map((image, idx) => (
-              <Image src={image} w="70%" h="100vh" key={idx} />
+              <Image src={image} w="70%" h="70vh" key={idx} />
             ))}
           </Carousel>
-        </Flex>
-        <Flex bg="blue.50">
-          <Flex
-            w={{ base: "100%", md: "75%" }}
-            mx={{ base: "0", md: "12.5%" }}
-            h="50vh"
-            flexDirection={"column"}
-          >
-            <Heading>About Us</Heading>
-            <Text>
-              We at neurospace provide you the best possible team of doctors
-              experienced in the field of Neurology , orthopedics , psychiatry
-              and physiotherapy. Being located at the center of city, our clinic
-              is easily approachable . We also have a pharmacy providing easy
-              access to the medications.
-            </Text>
-          </Flex>
         </Flex>
       </Flex>
     </Flex>

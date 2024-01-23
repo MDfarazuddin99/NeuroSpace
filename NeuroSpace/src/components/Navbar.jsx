@@ -116,7 +116,7 @@ function Navbar() {
         </Button>
 
         <Button variant={"navbarbutton"} onClick={() => handleClick('/shakeeb')}>
-          <NavLink to="/shakeeb">DR. Shakeeb Ahrar</NavLink>
+          <NavLink to="/shakeeb">Dr. Shakeeb Ahrar</NavLink>
         </Button>
         <Button variant={"navbarbutton"} onClick={() => handleClick('/team')}>
           <NavLink to="/team">Team</NavLink>

@@ -6,8 +6,6 @@ import bgimage from "../../assets/bg_image.jpg";
 import banner from "../../assets/home_page_banner.png";
 import banner2 from "../../assets/home_page_banner_2.png";
 
-
-
 import c1 from "../../assets/clinic/clinic1.jpg";
 import c2 from "../../assets/clinic/clinic2.jpg";
 import c3 from "../../assets/home_slide_show.jpeg";
@@ -24,11 +22,17 @@ const Home = () => {
   return (
     <Flex flexDirection={"column"}>
       <Flex>
-        <Image display={{base: 'none', md: 'initial'}}src={banner} h={{md:"90vh", base: '30vh'}}/>
-        <Image display={{base: 'initial', md: 'none'}}src={banner2} h={{md:"90vh", base: '30vh'}}/>
-        
+        <Image
+          display={{ base: "none", md: "initial" }}
+          src={banner}
+          h={{ md: "90vh", base: "30vh" }}
+        />
+        <Image
+          display={{ base: "initial", md: "none" }}
+          src={banner2}
+          h={{ md: "90vh", base: "30vh" }}
+        />
       </Flex>
-
 
       <Flex
         w="full"
@@ -42,9 +46,24 @@ const Home = () => {
           display={{ md: "none", base: "flex" }}
           bg="blue.200"
           justifyContent={"center"}
+        ></Box>
+        <Flex
+          display={{ base: "initial", md: "none" }}
+          bg="blue.50"
+          w="100%"
+          p="1%"
+          
         >
-        </Box>
-
+          <Flex>
+            <Text fontSize={"22"}>
+              We at neurospace provide you the best possible team of doctors
+              experienced in the field of Neurology , orthopedics , psychiatry
+              and physiotherapy. Being located at the center of city, our clinic
+              is easily approachable . We also have a pharmacy providing easy
+              access to the medications.
+            </Text>
+          </Flex>
+        </Flex>
         {/* <Flex w="100%" backdropFilter=" blur(10px)" px={"2%"} py={"1%"}>
           <Image src={hplogo} h={{ md: 200, base: 100 }} />
           <Flex alignItems={"center"} justifyContent={"center"} w="100%">
@@ -72,7 +91,6 @@ const Home = () => {
           />
         </Flex>
          */}
-
       </Flex>
     </Flex>
   );

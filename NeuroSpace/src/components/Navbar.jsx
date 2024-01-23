@@ -14,6 +14,7 @@ import HeaderLogo from "../assets/HeaderLogo.png";
 import { NavLink , useNavigate} from "react-router-dom";
 
 import { useEffect, useState } from "react";
+import Services from './mainContent/Services';
 
 
 
@@ -80,16 +81,19 @@ function Navbar() {
             <NavLink to="/">Home</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/services">SERVICES</NavLink>
-          </MenuItem>
-          <MenuItem>
-            <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
-          </MenuItem>
-          <MenuItem>
-            <NavLink to="/team">TEAM</NavLink>
+            <NavLink to="/gallery">Gallery</NavLink>
           </MenuItem>          
           <MenuItem>
-            <NavLink to="/contact-us">CONTACT US</NavLink>
+            <NavLink to="/services">Services</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink to="/shakeeb">Dr. Shakeeb Ahrar</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink to="/team">Team</NavLink>
+          </MenuItem>          
+          <MenuItem>
+            <NavLink to="/contact-us">Contact Us</NavLink>
           </MenuItem>
 
           <MenuItem>

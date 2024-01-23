@@ -14,13 +14,10 @@ const Gallery = () => {
     <Container variant={"main"} p={0}>
       <Flex
         backdropFilter="blur(5px)"
-        alignItems={"center"}
-        justifyContent={"center"}
-        h="100vh"
       >
         <Flex alignItems="center" bg="blue.100" flexDirection={"column"}>
           <Heading>Gallery</Heading>
-          <Flex w="100%">
+          <Flex w={{base:"100%", md:"50%"}}>
             <Carousel autoPlay="true" infiniteLoop="true">
               {homeCarousel.map((image, idx) => {
                 return <Image src={image} key={idx} h="500px" />;

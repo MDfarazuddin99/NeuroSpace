@@ -1,33 +1,163 @@
-import { Container, Flex } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Avatar,
+  Box,
+  Heading,
+  Text,
+  Grid,
+  Image,
+  Button,
+  Stack,
+} from "@chakra-ui/react";
 
-import { Helmet } from "react-helmet";
-import { useEffect } from "react";
+import { FaStar } from "react-icons/fa";
+import google from "../../assets/google.png";
 
 const Blog = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://static.elfsight.com/platform/platform.js";
-    script.defer = true;
+  const handleButtonClick = (externalLink) => {
+    window.open(externalLink, "_blank");
+  };
 
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+  const googleReviews = [
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+    {
+      name: "John Doe",
+      avatarUrl: "https://example.com/avatar.jpg",
+      rating: 4,
+      reviewText: "Great experience! Highly recommend.",
+    },
+  ];
 
   return (
-    <Container variant="main">
-      <Flex backdropFilter="blur(5px)" justifyContent={"center"}>
-        <Flex bg="blue.50" my="2%" h="100vh" w="70%" m={0}>
-          {/* <Helmet defer={false}>
-            <script
-              defer
-              type="text/javascript"
-              src="https://static.elfsight.com/platform/platform.js"
-            ></script>
-          </Helmet>
-          <div className="elfsight-app-2c429c63-3fbd-4c09-9ed3-fbb24fd7f9b4" data-elfsight-app-lazy></div> */}
+    <Container variant="main" py={"2vh"} p={0}>
+      <Flex
+        backdropFilter="blur(5px)"
+        justifyContent={"center"}
+        h={{ base: "auto", md: "100%" }}
+      >
+        <Flex bg="blue.50" my="1%" w={{ md: "80%", base: "100%" }} p={"1%"}>
+          <Flex flexDirection={"column"} w="100%">
+            <Flex justifyContent={"center"}>
+              <Image h="150px" src={google} />
+            </Flex>
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(5, 1fr)" }}
+              gap={6}
+              mx={"1%"}
+            >
+              {googleReviews.map((review, idx) => (
+                <Box
+                  key={idx}
+                  bg="white"
+                  p={4}
+                  borderWidth="1px"
+                  borderRadius="lg"
+                  overflow="hidden"
+                  boxShadow="md"
+                >
+                  <Flex alignItems="center">
+                    <Avatar src={review.avatarUrl} alt={review.name} mr={4} />
+                    <Box>
+                      <Heading as="h3" size="md" mb={2}>
+                        {review.name}
+                      </Heading>
+                      <Flex alignItems="center">
+                        {Array.from({ length: review.rating }, (_, index) => (
+                          <FaStar key={index} color="#FFD700" />
+                        ))}
+                      </Flex>
+                    </Box>
+                  </Flex>
+                  <Text mt={4}>{review.reviewText}</Text>
+                </Box>
+              ))}
+            </Grid>
+            <Flex my={"5%"} justifyContent={"center"}>
+              <Stack
+                direction={{ base: "columb", md: "row" }}
+                w={{ base: "100%", md: "30%" }}
+              >
+                <Button
+                  bg="blue.500"
+                  m={0}
+                  _hover={{ bg: "teal.500" }}
+                  onClick={() => {
+                    handleButtonClick(
+                      "https://www.google.com/search?kgmid=/g/11nn4nvjth&hl=en-IN&q=NEUROSPACE-+Dr+Shakeeb+Ahrar+.+MD,+DM+Neurology+(NIMS)+(Gold+Medalist).+Best+Neurologist+in+Hyderabad.&kgs=0a3ecf775bda2391&shndl=17&source=sh/x/kp/osrp/m5/2"
+                    );
+                  }}
+                >
+                  View More
+                </Button>
+                <Button
+                  bg="green.500"
+                  m={0}
+                  _hover={{ bg: "teal.500" }}
+                  onClick={() => {
+                    handleButtonClick(
+                      "https://www.google.com/search?kgmid=/g/11nn4nvjth&hl=en-IN&q=NEUROSPACE-+Dr+Shakeeb+Ahrar+.+MD,+DM+Neurology+(NIMS)+(Gold+Medalist).+Best+Neurologist+in+Hyderabad.&kgs=0a3ecf775bda2391&shndl=17&source=sh/x/kp/osrp/m5/2"
+                    );
+                  }}
+                >
+                  Write a Review
+                </Button>
+              </Stack>
+            </Flex>
+          </Flex>
         </Flex>
       </Flex>
     </Container>

@@ -14,8 +14,9 @@ const Gallery = () => {
     <Container variant={"main"} p={0}>
       <Flex
         backdropFilter="blur(5px)"
+        h="100vh"
       >
-        <Flex alignItems="center" bg="blue.100" flexDirection={"column"}>
+        <Flex  alignItems="center" bg="blue.100" flexDirection={"column"} h="550px">
           <Heading>Gallery</Heading>
           <Flex w={{base:"100%", md:"50%"}}>
             <Carousel autoPlay="true" infiniteLoop="true">

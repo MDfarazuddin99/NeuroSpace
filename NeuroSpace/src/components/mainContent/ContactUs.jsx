@@ -15,8 +15,8 @@ import { FaLocationDot } from "react-icons/fa6";
 const ContactUs = () => {
   return (
     <Container variant={"main"} py={"2vh"}>
-      <Flex backdropFilter="blur(5px)">
-        <Flex bg="blue.50" w="75%" mx="12.5%" flexDir={"column"} px={5} pb={5}>
+      <Flex backdropFilter="blur(5px)" >
+        <Flex bg="blue.50" w={{base:"100%", md:"75%"}} mx={{base:"0", md:"12.5%"}} flexDir={"column"} px={5} pb={5}>
           <Flex
             bg="blue.50"
             w="100%"

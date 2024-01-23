@@ -97,7 +97,7 @@ function Navbar() {
           </MenuItem>
 
           <MenuItem>
-            <NavLink to="/blog">REVIEWS</NavLink>
+            <NavLink to="/blog">Reviews</NavLink>
           </MenuItem>
         </MenuList>
       </Menu>

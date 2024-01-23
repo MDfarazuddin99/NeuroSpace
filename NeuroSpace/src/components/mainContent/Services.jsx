@@ -212,6 +212,8 @@ const Services = () => {
               h={100}
               alignItems={"center"}
               justifyContent={"center"}
+              bg="blue.100"
+              w="100%"              
             >
               <Heading> Treatments provided</Heading>
               <Image src={s1} />
@@ -254,6 +256,8 @@ const Services = () => {
               h={100}
               alignItems={"center"}
               justifyContent={"center"}
+              bg="blue.100"
+              w="100%"              
             >
               <Heading> Physiotherapy Services</Heading>
               <Image src={s7} />
@@ -296,6 +300,8 @@ const Services = () => {
               h={100}
               alignItems={"center"}
               justifyContent={"center"}
+              bg="blue.100"
+              w="100%"              
             >
               <Heading> Neurophysiology Studies</Heading>
               <Image src={s8} />
@@ -339,6 +345,8 @@ const Services = () => {
               h={100}
               alignItems={"center"}
               justifyContent={"center"}
+              bg="blue.100"
+              w="100%"
             >
               <Heading> Pharmacy </Heading>
               <Image src={s5} />

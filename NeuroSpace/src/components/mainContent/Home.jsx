@@ -4,6 +4,8 @@ import hplogo from "../../assets/homepagelogo.png";
 import shakeeb from "../../assets/shakeeb.jpeg";
 import bgimage from "../../assets/bg_image.jpg";
 import banner from "../../assets/home_page_banner.png";
+import banner2 from "../../assets/home_page_banner_2.png";
+
 
 
 import c1 from "../../assets/clinic/clinic1.jpg";
@@ -22,7 +24,9 @@ const Home = () => {
   return (
     <Flex flexDirection={"column"}>
       <Flex>
-        <Image src={banner} h={{md:"90vh", base: '30vh'}}/>
+        <Image display={{base: 'none', md: 'initial'}}src={banner} h={{md:"90vh", base: '30vh'}}/>
+        <Image display={{base: 'initial', md: 'none'}}src={banner2} h={{md:"90vh", base: '30vh'}}/>
+        
       </Flex>
 
 
@@ -39,15 +43,6 @@ const Home = () => {
           bg="blue.200"
           justifyContent={"center"}
         >
-          <Heading
-            fontSize={"2xl"}
-            color="white"
-            bgGradient="linear(to-r, blue.500, teal.500)"
-            bgClip="text"
-            fontWeight="bold"
-          >
-            NeuroSpace
-          </Heading>
         </Box>
 
         {/* <Flex w="100%" backdropFilter=" blur(10px)" px={"2%"} py={"1%"}>
@@ -77,17 +72,7 @@ const Home = () => {
           />
         </Flex>
          */}
-        <Flex
-          w={{ base: "100%", md: "50%" }}
-          mx={{ md: "25%", base: 0 }}
-          alignItems={"center"}
-        >
-          <Carousel autoPlay="true" infiniteLoop="true">
-            {homeCarousel.map((image, idx) => (
-              <Image src={image} w="70%" h="70vh" key={idx} />
-            ))}
-          </Carousel>
-        </Flex>
+
       </Flex>
     </Flex>
   );

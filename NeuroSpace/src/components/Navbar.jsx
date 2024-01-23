@@ -11,15 +11,25 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import HeaderLogo from "../assets/HeaderLogo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink , useNavigate} from "react-router-dom";
 
 import { useEffect, useState } from "react";
 
+
+
 function Navbar() {
   const [hasShadow, setHasShadow] = useState(false);
+  const navigateTo = useNavigate();
+
+  const handleClick = (newPath) => {
+    // Use the history object to navigate to the new URL
+    console.log("button pressed");
+    navigateTo(newPath);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log("scrolled");
       const scrollY = window.scrollY;
       setHasShadow(scrollY > 50);
     };
@@ -89,25 +99,25 @@ function Navbar() {
       </Menu>
 
       <Flex w="full" display={{ base: "none", md: "flex" }}>
-        <Button variant={"navbarbutton"}>
+        <Button variant={"navbarbutton"} onClick={() => handleClick('/')}>
           <NavLink to="/">Home</NavLink>
         </Button>
 
-        <Button variant={"navbarbutton"}>
+        <Button variant={"navbarbutton"} onClick={() => handleClick('/services')}>
           <NavLink to="/services">SERVICES</NavLink>
         </Button>
 
-        <Button variant={"navbarbutton"}>
+        <Button variant={"navbarbutton"} onClick={() => handleClick('/shakeeb')}>
           <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
         </Button>
-        <Button variant={"navbarbutton"}>
+        <Button variant={"navbarbutton"} onClick={() => handleClick('/team')}>
           <NavLink to="/team">TEAM</NavLink>
         </Button>
-        <Button variant={"navbarbutton"}>
+        <Button variant={"navbarbutton"} onClick={() => handleClick('/contact-us')}>
           <NavLink to="/contact-us">CONTACT US</NavLink>
         </Button>
 
-        <Button variant={"navbarbutton"}>
+        <Button variant={"navbarbutton"} onClick={() => handleClick('/blog')}>
           <NavLink to="/blog">REVIEWS</NavLink>
         </Button>
       </Flex>

@@ -16,20 +16,21 @@ const ContactUs = () => {
   return (
     <Container variant={"main"} py={"2vh"}>
       <Flex backdropFilter="blur(5px)">
-        <Flex bg="blue.50" w="75%" mx="12.5%" flexDir={"column"}>
+        <Flex bg="blue.50" w="75%" mx="12.5%" flexDir={"column"} px={5} pb={5}>
           <Flex
             bg="blue.50"
             w="100%"
             flexDirection={{ md: "row", base: "column" }}
             fontSize={"lg"}
             px="2%"
+            p={3}
           >
-            <Flex flexDirection={"column"} alignItems={"center"}>
-              <Heading fontSize={"5xl"}>
-                Contact Us Anytime, 7 days a Week
+            <Flex flexDirection={"column"} alignItems={"center"} justifyContent={'center'}>
+              <Heading fontSize={{md: "5xl", base: "3xl"}} color="blue.900">
+                Contact Us
               </Heading>
               <Flex flexDirection={{base:'column', md:'row'}}>
-                <Flex flexDir={"column"} w="50%" mx="2%" fontSize={"20px"}>
+                <Flex bg= "blue.100" boxShadow="lg" borderRadius={'20px'} p = {2} flexDir={"column"} w={{md:"50%", base:"100%"}} fontSize={"20px"} >
                   <Text fontWeight={"bold"} w={{md: "50%", base:"100%"}} mx="25%">
                     Contact Info
                   </Text>
@@ -48,8 +49,8 @@ const ContactUs = () => {
                   </HStack>
                 </Flex>
                 <Spacer />
-                <Flex flexDir={"column"} W="50%" mx="2%" fontSize={"20px"}>
-                  <Text fontWeight={"bold"} mb="5%" w="70%" mx="15%">
+                <Flex bg= "blue.100" boxShadow="lg" borderRadius={'20px'} p = {2}flexDir={"column"} w={{md:"50%", base:"100%"}} ml ={{base:"0", md:"2%"}} mt ={{base:"2%", md:"0"}} fontSize={"20px"} alignItems={'center'}>
+                  <Text fontWeight={"bold"}>
                     Open Hours
                   </Text>
                   <HStack mb="5%">
@@ -88,7 +89,6 @@ const ContactUs = () => {
             flexDirection={"column"}
           >
             <Heading>Map</Heading>
-
             <iframe
               display={{ base: "none", md: "initial" }}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6787.540956136136!2d78.42587023542872!3d17.396153941362982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976492c87e31%3A0x2468e03e03b2c00e!2sNeurospace%20Excellence%20In%20Brain%20Spine%20%26%20Pain%20Care!5e0!3m2!1sen!2sin!4v1705258860149!5m2!1sen!2sin"

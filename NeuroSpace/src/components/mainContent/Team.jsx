@@ -88,7 +88,7 @@ const Team = () => {
 
   const triveniInfo = {
     name: "Veligonda Triveni",
-    experience: "13+ years",
+    experience: "5+ years",
     qualifications: "BSC (NPT), MSC (PSY)",
     areasOfExpertise: [
       "EEG",
@@ -439,7 +439,7 @@ const Team = () => {
               <Box bg="blue.50" m={"2%"}>
                 <Flex flexDirection={"column"} alignItems={"center"}>
                   <Heading display={{ base: "initial", md: "none" }}>
-                    {triveniInfo.name}
+                    {babuInfo.name}
                   </Heading>
                   <Image
                     src={babu}
@@ -453,19 +453,19 @@ const Team = () => {
                       <Td fontWeight={"bold"} bg="blue.100">
                         Experience
                       </Td>
-                      <Td>{triveniInfo.experience}</Td>
+                      <Td>{babuInfo.experience}</Td>
                     </Tr>
                     <Tr>
                       <Td fontWeight={"bold"}>Qualifications</Td>
-                      <Td>{triveniInfo.qualifications}</Td>
+                      <Td>{babuInfo.qualifications}</Td>
                     </Tr>
                     <Tr bg="blue.100">
                       <Td fontWeight={"bold"}>Areas of Expertise</Td>
-                      <Td>{triveniInfo.areasOfExpertise.join(", ")}</Td>
+                      <Td>{babuInfo.areasOfExpertise.join(", ")}</Td>
                     </Tr>
                     <Tr>
                       <Td fontWeight={"bold"}>Languages</Td>
-                      <Td>{triveniInfo.languages.join(", ")}</Td>
+                      <Td>{babuInfo.languages.join(", ")}</Td>
                     </Tr>
                   </Tbody>
                 </Table>

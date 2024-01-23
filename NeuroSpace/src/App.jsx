@@ -12,6 +12,7 @@ import BookAppointment from './components/mainContent/BookAppointment';
 import ContactUs from './components/mainContent/ContactUs';
 import Blog from './components/mainContent/Blog';
 import Team from './components/mainContent/Team';
+import Gallery from "./components/mainContent/Gallery"
 import { Route, Routes } from "react-router-dom";
 
 
@@ -42,6 +43,8 @@ function App() {
             <Route path="/team" Component={Team}>
             </Route>
 
+            <Route path="/gallery" Component={Gallery}>
+            </Route>
           </Routes>         
 
         <Footer/>

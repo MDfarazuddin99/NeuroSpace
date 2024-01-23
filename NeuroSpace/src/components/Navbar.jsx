@@ -103,22 +103,26 @@ function Navbar() {
           <NavLink to="/">Home</NavLink>
         </Button>
 
+        <Button variant={"navbarbutton"} onClick={() => handleClick('/gallery')}>
+          <NavLink to="/gallery">Gallery</NavLink>
+        </Button>
+
         <Button variant={"navbarbutton"} onClick={() => handleClick('/services')}>
-          <NavLink to="/services">SERVICES</NavLink>
+          <NavLink to="/services">Services</NavLink>
         </Button>
 
         <Button variant={"navbarbutton"} onClick={() => handleClick('/shakeeb')}>
-          <NavLink to="/shakeeb">DR. SHAKEEB AHRAR</NavLink>
+          <NavLink to="/shakeeb">DR. Shakeeb Ahrar</NavLink>
         </Button>
         <Button variant={"navbarbutton"} onClick={() => handleClick('/team')}>
-          <NavLink to="/team">TEAM</NavLink>
+          <NavLink to="/team">Team</NavLink>
         </Button>
         <Button variant={"navbarbutton"} onClick={() => handleClick('/contact-us')}>
-          <NavLink to="/contact-us">CONTACT US</NavLink>
+          <NavLink to="/contact-us">Contact Us</NavLink>
         </Button>
 
         <Button variant={"navbarbutton"} onClick={() => handleClick('/blog')}>
-          <NavLink to="/blog">REVIEWS</NavLink>
+          <NavLink to="/blog">Reviews</NavLink>
         </Button>
       </Flex>
     </Flex>

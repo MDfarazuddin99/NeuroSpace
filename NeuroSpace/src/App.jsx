@@ -9,6 +9,7 @@ import ContactUs from "./components/mainContent/ContactUs";
 import Blog from "./components/mainContent/Blog";
 import Team from "./components/mainContent/Team";
 import Gallery from "./components/mainContent/Gallery";
+import Reviews from "./components/mainContent/Reviews";
 import { Route, Routes } from "react-router-dom";
 
 import { Box } from "@chakra-ui/react";
@@ -21,6 +22,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" Component={Home}></Route>
+
+        <Route exact path="/reviews" Component={Reviews}></Route>
 
         <Route path="/services" Component={Services}></Route>
 

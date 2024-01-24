@@ -158,7 +158,7 @@ const Blog = () => {
                   _hover={{ bg: "teal.500" }}
                   onClick={() => {
                     handleButtonClick(
-                      "https://www.google.com/search?kgmid=/g/11nn4nvjth&hl=en-IN&q=NEUROSPACE-+Dr+Shakeeb+Ahrar+.+MD,+DM+Neurology+(NIMS)+(Gold+Medalist).+Best+Neurologist+in+Hyderabad.&kgs=0a3ecf775bda2391&shndl=17&source=sh/x/kp/osrp/m5/2"
+                      "/reviews"
                     );
                   }}
                 >

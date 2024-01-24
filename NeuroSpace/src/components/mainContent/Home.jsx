@@ -17,11 +17,13 @@ const Home = () => {
           display={{ base: "none", md: "initial" }}
           src={banner}
           h={{ md: "90vh", base: "30vh" }}
+          w="100%"
         />
         <Image
           display={{ base: "initial", md: "none" }}
           src={banner2}
           h={{ md: "90vh", base: "30vh" }}
+          w="100%"
         />
       </Flex>
 

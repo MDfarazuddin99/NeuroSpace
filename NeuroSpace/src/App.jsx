@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import Home from "./components/mainContent/Home";
 import Services from "./components/mainContent/Services";
 import Shakeeb from "./components/mainContent/Shakeeb";
-import BookAppointment from "./components/mainContent/BookAppointment";
 import ContactUs from "./components/mainContent/ContactUs";
 import Blog from "./components/mainContent/Blog";
 import Team from "./components/mainContent/Team";

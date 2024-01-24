@@ -21,11 +21,22 @@ import omer from "../../assets/reviews/omer.png";
 import { FaStar } from "react-icons/fa";
 import google from "../../assets/google.png";
 
+import {useNavigate} from "react-router-dom";
+
+
+
 const Blog = () => {
+  const navigateTo = useNavigate();
+
   const handleButtonClick = (externalLink) => {
     window.open(externalLink, "_blank");
   };
 
+  const handleClick = (newPath) => {
+    // Use the history object to navigate to the new URL
+    console.log("button pressed");
+    navigateTo(newPath);
+  };
   const maxLength = 300;
 
   const googleReviews = [
@@ -55,35 +66,35 @@ const Blog = () => {
       reviewText: `Hello everyone
       Very well-run office. Extremely organized. All the staff I've dealt with over the course of several visits has been very professional and personable. Dr. Shakeeb is very knowledgeable and a careful listener. In addition to taking a very thorough history, he also took all the time needed to answer my numerous questions. I feel like I'm in good hands.
       Thank you`,
-      link: "https://maps.app.goo.gl/hebtxrgajFMFuXmGA"
+      link: "https://maps.app.goo.gl/hebtxrgajFMFuXmGA",
     },
     {
       name: "Neha Afreen",
       avatarUrl: neha,
       rating: 5,
       reviewText: `Humble, ethical and non-commercial doctor. A very understanding one and listens to your health concerns. It’s rare to find a doctor that combines such personal touches and care for a patient as a person with outstanding quality of medical care. Dr. Shakeeb Ahrar doesn’t confuse his patients, He keeps it simple. Highly recommended to anyone who is looking for a specialist.`,
-      link: "https://maps.app.goo.gl/bYd6SXvLRLJ412o2A"
+      link: "https://maps.app.goo.gl/bYd6SXvLRLJ412o2A",
     },
     {
       name: "M Tanveer Ali Khan",
       avatarUrl: tanveer,
       rating: 5,
       reviewText: `Dr Shakeeb is a very skilled and knowledgeable doctor. He gets the right investigations done and is honest and humble with his patients. He answers all the questions and gives clarity on patient's condition. He has a very good approach to treatment and I would definitely recommend him.`,
-      link:"https://maps.app.goo.gl/6Wq7UfcvSoYjgqrKA"
+      link: "https://maps.app.goo.gl/6Wq7UfcvSoYjgqrKA",
     },
     {
       name: "Mohammed Arifuzaman",
       avatarUrl: arif,
       rating: 5,
       reviewText: `He is one of the most talented and versatile  Neurophysicians in town. I had referred one of my friends who was in status epilepticus during the COVID pandemic lockdown who was managed exceptionally well by him. The patient is doing very well with no neurological deficits. Kudos to Dr. Shakeeb's knowledge and judgement.`,
-      link:"https://maps.app.goo.gl/W9BqyJtbaRYoqmVQA"
+      link: "https://maps.app.goo.gl/W9BqyJtbaRYoqmVQA",
     },
     {
       name: "Mohammed Omer",
       avatarUrl: omer,
       rating: 5,
       reviewText: `He is an honest and a skilled neurologist, and is very passionate about his profession. Prioritizes patient's well-being over everything else. Highly recommend to consult him should one need neurological advice.`,
-      link:"https://maps.app.goo.gl/NKqM6PNqq12HjVaw8"
+      link: "https://maps.app.goo.gl/NKqM6PNqq12HjVaw8",
     },
   ];
 
@@ -137,7 +148,7 @@ const Blog = () => {
                         href={review.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        color={'blue'}
+                        color={"blue"}
                         isExternal
                       >
                         read more
@@ -156,11 +167,7 @@ const Blog = () => {
                   bg="blue.500"
                   m={0}
                   _hover={{ bg: "teal.500" }}
-                  onClick={() => {
-                    handleButtonClick(
-                      "/reviews"
-                    );
-                  }}
+                  onClick={() => handleClick('/reviews')}
                 >
                   View More
                 </Button>

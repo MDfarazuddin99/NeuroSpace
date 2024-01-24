@@ -23,21 +23,19 @@ function App() {
       <Routes>
         <Route exact path="/" Component={Home}></Route>
 
-        <Route exact path="/reviews" Component={Reviews}></Route>
+        <Route exact path="reviews" Component={Reviews}></Route>
 
-        <Route path="/services" Component={Services}></Route>
+        <Route path="services" Component={Services}></Route>
 
         <Route path="shakeeb" Component={Shakeeb}></Route>
-
-        <Route path="book-appointment" Component={BookAppointment}></Route>
 
         <Route path="contact-us" Component={ContactUs}></Route>
 
         <Route path="blog" Component={Blog}></Route>
 
-        <Route path="/team" Component={Team}></Route>
+        <Route path="team" Component={Team}></Route>
 
-        <Route path="/gallery" Component={Gallery}></Route>
+        <Route path="gallery" Component={Gallery}></Route>
       </Routes>
       <a href="tel:070321 07724">
         <Box

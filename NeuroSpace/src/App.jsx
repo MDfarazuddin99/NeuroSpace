@@ -9,7 +9,7 @@ import ContactUs from "./components/mainContent/ContactUs";
 import Blog from "./components/mainContent/Blog";
 import Team from "./components/mainContent/Team";
 import Gallery from "./components/mainContent/Gallery";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { Box } from "@chakra-ui/react";
 import { PhoneIcon } from "@chakra-ui/icons";
@@ -36,8 +36,10 @@ function App() {
 
         <Route path="/gallery" Component={Gallery}></Route>
       </Routes>
-      <Link href="tel:070321 07724">
+      <a href="tel:070321 07724">
         <Box
+          as="a"
+          display="inline-block"
           pos="fixed"
           w="60px"
           h="60px"
@@ -55,7 +57,7 @@ function App() {
             style={{ marginTop: "22px" }}
           ></PhoneIcon>
         </Box>
-      </Link>
+      </a>
       <Footer />
     </div>
   );

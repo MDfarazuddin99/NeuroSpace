@@ -16,7 +16,7 @@ function Header(){
             <Icon as={FaLocationDot}/> Mehdipatnam, Hyderabad
           </Text>
           <Text  fontSize={{base: 'md', md:'xl'}} fontWeight={'bold'} ml={{base: 0, md: "5%"}} mt={{base: 1, md: 0}}>
-            <Icon as={FaPhoneAlt} /> <a href="tel:070321 07724">7032107724</a>
+            <Icon as={FaPhoneAlt} /> <a href="tel:7032107724">7032107724</a>
           </Text>          
           <Spacer display={{base: 'none', md: 'block'}}/>
           <Button bg={'orange'} rightIcon={<ArrowForwardIcon />} flex={"None"} mr={{md: "10%"}} _hover={{bg:'blue.50'}} mb={{base: 1, md : 0}}>

@@ -197,7 +197,12 @@ const Team = () => {
                 </Text>
               </Box>
             </Flex>
-            <Flex display={{base:"inital", md:"none"}} w="100%" bg="blue.200" h="100px"></Flex>
+            <Flex
+              display={{ base: "inital", md: "none" }}
+              w="100%"
+              bg="blue.200"
+              h="100px"
+            ></Flex>
             <Flex
               w={{ md: "50%", base: "100%" }}
               flexDirection={{ md: "row", base: "column" }}
@@ -279,7 +284,7 @@ const Team = () => {
               </Box>
             </Flex>
           </Flex>
-          
+
           <Flex w="100%" bg="blue.200" h="100px"></Flex>
 
           <Flex flexDirection={{ md: "row", base: "column" }} w="100%" m={"1%"}>
@@ -372,7 +377,12 @@ const Team = () => {
                 </List>
               </Box>
             </Flex>
-            <Flex display={{base:"inital", md:"none"}} w="100%" bg="blue.200" h="100px"></Flex>
+            <Flex
+              display={{ base: "inital", md: "none" }}
+              w="100%"
+              bg="blue.200"
+              h="100px"
+            ></Flex>
             <Flex
               w={{ md: "50%", base: "100%" }}
               flexDirection={{ md: "row", base: "column" }}
@@ -429,12 +439,18 @@ const Team = () => {
                   Meet Mr. Shoeb Abrar, the dynamic Managing Director of our
                   center, whose unwavering commitment to healthcare excellence
                   has been instrumental in shaping our center into a beacon of
-                  quality medical care. Background and Expertise: With a rich
+                  quality medical care.
+                </Text>
+                <Text>
+                  <strong>Background and Expertise:</strong> With a rich
                   background in healthcare management of about 4 years, Mr.
                   Abrar brings a wealth of experience to his role. His expertise
                   lies in strategic planning, operational efficiency, and a deep
                   understanding of the ever-evolving landscape of healthcare
-                  administration. Financial Stewardship: With a keen eye for
+                  administration.
+                </Text>
+                <Text>
+                  <strong>Financial Stewardship:</strong> With a keen eye for
                   financial management, Mr. Abrar has steered the hospital
                   towards fiscal responsibility and sustainable growth. His
                   strategic financial planning has contributed to our center's
@@ -442,7 +458,6 @@ const Team = () => {
                 </Text>
               </Box>
             </Flex>
-
           </Flex>
 
           <Flex w="100%" bg="blue.200" h="100px"></Flex>
@@ -453,9 +468,16 @@ const Team = () => {
               flexDirection={{ md: "row", base: "column" }}
             >
               <Box bg="blue.50" m={"2%"}>
-                <Flex flexDirection={"column"} alignItems={"center"}>
+                <Flex
+                  flexDirection={"column"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
                   <Heading display={{ base: "initial", md: "none" }}>
                     {babuInfo.name}
+                  </Heading>
+                  <Heading display={{ base: "initial", md: "none" }}>
+                    Clinical Neurotechnologist, Hyderabad
                   </Heading>
                   <Image
                     src={babu}
@@ -494,6 +516,7 @@ const Team = () => {
                 px={1}
                 w={"100%"}
                 fontSize={"20px"}
+                display={{ base: "none", md: "initial" }}
               >
                 <Heading color="blue.900">{babuInfo.name}</Heading>
                 <Text mb={8} fontWeight={"bold"}>
@@ -529,7 +552,12 @@ const Team = () => {
                 </Text> */}
               </Box>
             </Flex>
-            <Flex display={{base:"inital", md:"none"}} w="100%" bg="blue.200" h="100px"></Flex>
+            <Flex
+              display={{ base: "inital", md: "none" }}
+              w="100%"
+              bg="blue.200"
+              h="100px"
+            ></Flex>
             <Flex
               w={{ md: "50%", base: "100%" }}
               flexDirection={{ md: "row", base: "column" }}
@@ -538,6 +566,9 @@ const Team = () => {
                 <Flex flexDirection={"column"} alignItems={"center"}>
                   <Heading display={{ base: "initial", md: "none" }}>
                     {triveniInfo.name}
+                  </Heading>
+                  <Heading display={{ base: "initial", md: "none" }}>
+                    Clinical Neurotechnologist, Hyderabad
                   </Heading>
                   <Image
                     src={triveni}
@@ -576,6 +607,7 @@ const Team = () => {
                 px={1}
                 w={"100%"}
                 fontSize={"20px"}
+                display={{ base: "none", md: "initial" }}
               >
                 <Heading color="blue.900">{triveniInfo.name}</Heading>
                 <Text mb={8} fontWeight={"bold"}>
@@ -612,7 +644,6 @@ const Team = () => {
               </Box>
             </Flex>
           </Flex>
-
         </Flex>
       </Flex>
     </Container>

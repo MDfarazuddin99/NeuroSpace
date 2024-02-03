@@ -7,10 +7,10 @@ function Footer() {
     <Flex
       as="footer"
       align="center"
-      justify={"center"}
+      justify={{ base: "center", md: "space-between" }} // Adjusted justify value
       bg="teal.500"
       color="white"
-      p={"1%"}
+      p="1%"
       bottom="0"
       width="100%"
       direction={{ base: "column", md: "row" }}
@@ -25,11 +25,20 @@ function Footer() {
       ></iframe>
 
       <Spacer />
-      <Image
-        src={FooterLogo}
-        h={{ base: 70, md: 75 }}
-        m={{ base: 5, md: 0 }}
-      />
+      <Flex w="5%">
+        <IconButton
+          as="a"
+          href="https://www.instagram.com/neurospace.hyd/?igsh=MzNlNGNkZWQ4Mg%3D%3D"
+          target="_blank"
+          aria-label="Instagram"
+          icon={<FaInstagram />}
+          colorScheme="whiteAlpha"
+          fontSize={"50px"}
+          bg="teal.500"
+          _hover={{ bg: "teal.500" }}
+        />{" "}
+      </Flex>
+      <Image src={FooterLogo} h={{ base: 70, md: 75 }} m={{ base: 5, md: 0 }} />
     </Flex>
   );
 }

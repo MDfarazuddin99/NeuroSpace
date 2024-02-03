@@ -11,12 +11,11 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import HeaderLogo from "../assets/HeaderLogo.png";
-import { NavLink , useNavigate} from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { useEffect, useState } from "react";
-import Services from './mainContent/Services';
-
-
+import Services from "./mainContent/Services";
+import Gallery from "./mainContent/Gallery";
 
 function Navbar() {
   const [hasShadow, setHasShadow] = useState(false);
@@ -82,7 +81,7 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <NavLink to="/gallery">Gallery</NavLink>
-          </MenuItem>          
+          </MenuItem>
           <MenuItem>
             <NavLink to="/services">Services</NavLink>
           </MenuItem>
@@ -91,7 +90,7 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <NavLink to="/team">Team</NavLink>
-          </MenuItem>          
+          </MenuItem>
           <MenuItem>
             <NavLink to="/contact-us">Contact Us</NavLink>
           </MenuItem>
@@ -103,30 +102,42 @@ function Navbar() {
       </Menu>
 
       <Flex w="full" display={{ base: "none", md: "flex" }}>
-        <Button variant={"navbarbutton"} onClick={() => handleClick('/')}>
-          <NavLink to="/">Home</NavLink>
+        <Button variant={"navbarbutton"} onClick={() => handleClick("/")}>
+          Home
         </Button>
 
-        <Button variant={"navbarbutton"} onClick={() => handleClick('/gallery')}>
-          <NavLink to="/gallery">Gallery</NavLink>
+        <Button
+          variant={"navbarbutton"}
+          onClick={() => handleClick("/gallery")}
+        >
+          Gallery
         </Button>
 
-        <Button variant={"navbarbutton"} onClick={() => handleClick('/services')}>
-          <NavLink to="/services">Services</NavLink>
+        <Button
+          variant={"navbarbutton"}
+          onClick={() => handleClick("/services")}
+        >
+          Services
         </Button>
 
-        <Button variant={"navbarbutton"} onClick={() => handleClick('/shakeeb')}>
-          <NavLink to="/shakeeb">Dr. Shakeeb Ahrar</NavLink>
+        <Button
+          variant={"navbarbutton"}
+          onClick={() => handleClick("/shakeeb")}
+        >
+          Dr. Shakeeb Ahrar
         </Button>
-        <Button variant={"navbarbutton"} onClick={() => handleClick('/team')}>
-          <NavLink to="/team">Team</NavLink>
+        <Button variant={"navbarbutton"} onClick={() => handleClick("/team")}>
+          Team
         </Button>
-        <Button variant={"navbarbutton"} onClick={() => handleClick('/contact-us')}>
-          <NavLink to="/contact-us">Contact Us</NavLink>
+        <Button
+          variant={"navbarbutton"}
+          onClick={() => handleClick("/contact-us")}
+        >
+          Contact Us
         </Button>
 
-        <Button variant={"navbarbutton"} onClick={() => handleClick('/blog')}>
-          <NavLink to="/blog">Reviews</NavLink>
+        <Button variant={"navbarbutton"} onClick={() => handleClick("/blog")}>
+          Reviews
         </Button>
       </Flex>
     </Flex>

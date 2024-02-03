@@ -197,6 +197,7 @@ const Team = () => {
                 </Text>
               </Box>
             </Flex>
+            <Flex display={{base:"inital", md:"none"}} w="100%" bg="blue.200" h="100px"></Flex>
             <Flex
               w={{ md: "50%", base: "100%" }}
               flexDirection={{ md: "row", base: "column" }}
@@ -278,6 +279,8 @@ const Team = () => {
               </Box>
             </Flex>
           </Flex>
+          
+          <Flex w="100%" bg="blue.200" h="100px"></Flex>
 
           <Flex flexDirection={{ md: "row", base: "column" }} w="100%" m={"1%"}>
             <Flex
@@ -353,13 +356,23 @@ const Team = () => {
                 </Text>
 
                 <Heading size={"md"}>Experience</Heading>
-                <Text mb={2}>
-                  - CERTIFIED NEURODYNAMIC SOLUTIONS - CERTIFIED DRY NEEDLING
-                  PRACTITIONER (UK) - CERTIFIED ORTHOPEDIC MANUAL THERAPIST
-                </Text>
+                <List spacing={3}>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color="green.500" />
+                    Certified Neurodynamic Solutions
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color="green.500" />
+                    Certified Dry Needling Practitioner (UK)
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color="green.500" />
+                    Certified Orthopedic Manual Therapist
+                  </ListItem>
+                </List>
               </Box>
             </Flex>
-
+            <Flex display={{base:"inital", md:"none"}} w="100%" bg="blue.200" h="100px"></Flex>
             <Flex
               w={{ md: "50%", base: "100%" }}
               flexDirection={{ md: "row", base: "column" }}
@@ -375,7 +388,7 @@ const Team = () => {
                     aspectRatio={"1"}
                   />
                 </Flex>
-                <Table w={{ base: "100%", md: 300 }} >
+                <Table w={{ base: "100%", md: 300 }}>
                   <Tbody>
                     <Tr bg="blue.100">
                       <Td fontWeight={"bold"} bg="blue.100">
@@ -429,7 +442,10 @@ const Team = () => {
                 </Text>
               </Box>
             </Flex>
+
           </Flex>
+
+          <Flex w="100%" bg="blue.200" h="100px"></Flex>
 
           <Flex flexDirection={{ md: "row", base: "column" }} w="100%" m={"1%"}>
             <Flex
@@ -513,7 +529,7 @@ const Team = () => {
                 </Text> */}
               </Box>
             </Flex>
-
+            <Flex display={{base:"inital", md:"none"}} w="100%" bg="blue.200" h="100px"></Flex>
             <Flex
               w={{ md: "50%", base: "100%" }}
               flexDirection={{ md: "row", base: "column" }}
@@ -596,6 +612,7 @@ const Team = () => {
               </Box>
             </Flex>
           </Flex>
+
         </Flex>
       </Flex>
     </Container>

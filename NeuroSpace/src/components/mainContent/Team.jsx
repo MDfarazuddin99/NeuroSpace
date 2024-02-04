@@ -26,7 +26,7 @@ import shoeb from "../../assets/shoeb.jpeg";
 const Team = () => {
   const orthoInfo = {
     name: "Dr. Saadullah Khan Quadri",
-    experience: "4+ years",
+    experience: "7+ years",
     qualifications: "MBBS, MS, DNB (Gandhi Medical College), MRCS (UK)",
     areasOfExpertise: [
       "Fractures, Joint Pains, Deformity Correction in Children, Bone Infections, Bone Tumours, Joint Replacement Surgery",

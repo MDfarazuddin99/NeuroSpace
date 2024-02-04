@@ -167,13 +167,9 @@ const Services = () => {
   const neurophyservices = [
     {
       name: "EEG",
-      img: EMG,
-    },
-
-    {
-      name: "EMG",
       img: EEG,
     },
+
 
     {
       name: "Nerve Conduction Study",
